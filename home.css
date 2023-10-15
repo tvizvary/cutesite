@@ -1,0 +1,42 @@
+html {
+    background-color: #e7be6e;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    overflow: hidden;
+    position: fixed;
+    z-index: 1;
+}
+
+nav img {
+    height: 120px;
+    padding-top: 20px;
+    padding-left: 60px;
+}
+
+nav .logoSection {
+    float: left;
+}
+
+nav .imageSection {
+    float: right;
+}
+
+nav .imageSection img {
+    height: 200px;
+    margin-top: -40px;
+    padding-left: 190px;
+    padding-right: 70px;
+}
+
+#contactPageGif {
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    left: 10.1%;
+}
