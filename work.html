@@ -6,21 +6,35 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="home.css">
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <nav>
+        <div id="workNav">
             <div class="logoSection">
-                <img src="/img/logo.png" alt="logo">
+                <img src="/img/logo.png" alt="logo" usemap="#logoMap">
             </div>
             <div class="imageSection">
                 <img src="/img/about.gif" alt="about" usemap="#aboutMap">
                 <img src="/img/work.gif" alt="work" usemap="#workMap">
                 <img src="/img/contact.gif" alt="contact" usemap="#contactMap">
             </div>
-        </nav>
+        </div>
+        <div id="starterText">
+            <h1>LET'S TAKE A LOOK</h1>
+        </div>
+        <div id="imageContainer">
+            <img src="/img/runaway_zepp.png">
+            <img src="/img/Bad_balut.png">
+            <img src="/img/uh_oh.png">
+            <a href="me_time.html"><img src="/img/me_time(1).png"></a>
+            <img src="/img/lurking.gif">
+            <img src="/img/zepp_hey.gif">
+        </div>
     </body>
     <div name="mapDiv">
+        <map name="logoMap">
+            <area shape="rect" coords="0,0,450,170" href="home.html">
+        </map>
         <map name="aboutMap">
             <area shape="rect" coords="0,0,450,170" href="about.html">
         </map>
@@ -31,4 +45,5 @@
             <area shape="rect" coords="0,0,450,170" href="contact.html">
         </map>
     </div>
+    <script src="scripts.js"></script>
 </html>

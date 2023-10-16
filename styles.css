@@ -1,0 +1,138 @@
+
+/* MAIN ELEMENTS START */
+
+html {
+    background-color: #e7be6e;
+}
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 50pt;
+}
+
+/* MAIN ELEMENTS END */
+
+/* NAV ELEMENTS START */
+
+nav {
+    overflow: hidden;
+    position: fixed;
+    z-index: 1;
+}
+
+nav img {
+    height: 120px;
+    padding-top: 20px;
+    padding-left: 60px;
+}
+
+nav .logoSection {
+    float: left;
+}
+
+nav .imageSection {
+    float: right;
+}
+
+nav .imageSection img {
+    height: 200px;
+    margin-top: -40px;
+    padding-left: 190px;
+    padding-right: 70px;
+}
+
+#workNav {
+    overflow: hidden;
+    display: block;
+    padding-right: 124px;
+}
+
+#workNav img {
+    height: 120px;
+    padding-top: 20px;
+    padding-left: 60px;
+}
+
+#workNav .logoSection {
+    float: left;
+}
+
+#workNav .imageSection {
+    float: right;
+}
+
+#workNav .imageSection img {
+    height: 200px;
+    margin-top: -40px;
+    padding-left: 190px;
+    padding-right: 70px;
+}
+
+/* NAV ELEMENTS END */
+
+/* WORK PAGE ELEMENTS START */
+
+#starterText {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    left: 32.5%;
+    margin-top: 250px;
+    margin-bottom: 450px;
+
+    animation: scaleUp 1s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes scaleUp {
+    to {
+      transform: scale(50);
+    }
+}
+
+#imageContainer {
+    max-width: 100%;
+    object-fit: contain;
+    overflow: hidden;
+    display: block;
+}
+
+#imageContainer img {
+    border-style: solid;
+    border-width: 10px;
+    border-color: #e1a559;
+    height: 100%;
+    width: 99%;
+    display: inline-block;
+}
+
+/* WORK PAGE ELEMENTS START */
+
+/* GIF ELEMENTS START */
+
+#contactPageGif {
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    left: 10.1%;
+}
+
+#homePageGif {
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    left: 10.1%;
+}
+
+/* GIF ELEMENTS END */
