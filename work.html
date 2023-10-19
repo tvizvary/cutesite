@@ -3,7 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Cute Site</title>
+        <link rel="icon" type="image/x-icon" href="img/favicon.png">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles.css">
@@ -14,13 +15,13 @@
                 <img src="img/logo.png" alt="logo" usemap="#logoMap">
             </div>
             <div class="imageSection">
-                <img src="img/about.gif" alt="about" usemap="#aboutMap">
-                <img src="img/work.gif" alt="work" usemap="#workMap">
-                <img src="img/contact.gif" alt="contact" usemap="#contactMap">
+                <img id="about" src="img/about_firstFrame.gif" alt="about" usemap="#aboutMap">
+                <img id="work" src="img/work_firstFrame.gif" alt="work" usemap="#workMap">
+                <img id="contact" src="img/contact_firstFrame.gif" alt="contact" usemap="#contactMap">
             </div>
         </div>
         <div id="starterText">
-            <h1>LET'S TAKE A LOOK</h1>
+            <img id="introImg" src="img/workpage_text.png" alt="welcome to my 2d world">
         </div>
         <div id="imageContainer">
             <img src="img/runaway_zepp.png">
@@ -36,13 +37,13 @@
             <area shape="rect" coords="0,0,450,170" href="index.html">
         </map>
         <map name="aboutMap">
-            <area shape="rect" coords="0,0,450,170" href="about.html">
+            <area id="aboutArea" shape="rect" coords="0,0,450,170" href="about.html">
         </map>
         <map name="workMap">
-            <area shape="rect" coords="0,0,450,170" href="work.html">
+            <area id="workArea" shape="rect" coords="0,0,450,170" href="work.html">
         </map>
         <map name="contactMap">
-            <area shape="rect" coords="0,0,450,170" href="contact.html">
+            <area id="contactArea" shape="rect" coords="0,0,450,170" href="contact.html">
         </map>
     </div>
     <script src="scripts.js"></script>

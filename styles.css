@@ -11,9 +11,6 @@ body {
     font-family: Arial, sans-serif;
 }
 
-h1 {
-    font-size: 50pt;
-}
 
 /* MAIN ELEMENTS END */
 
@@ -32,10 +29,12 @@ nav img {
 }
 
 nav .logoSection {
+    padding-top: 25px;
     float: left;
 }
 
 nav .imageSection {
+    margin-right: 50px;
     float: right;
 }
 
@@ -49,7 +48,7 @@ nav .imageSection img {
 #workNav {
     overflow: hidden;
     display: block;
-    padding-right: 124px;
+    padding-right: 78px;
 }
 
 #workNav img {
@@ -59,6 +58,7 @@ nav .imageSection img {
 }
 
 #workNav .logoSection {
+    padding-top: 25px;
     float: left;
 }
 
@@ -81,9 +81,19 @@ nav .imageSection img {
     display: inline-block;
     position: relative;
     overflow: hidden;
-    left: 32.5%;
-    margin-top: 250px;
-    margin-bottom: 450px;
+
+}
+
+@keyframes scaleUp {
+    to {
+      transform: scale(50);
+    }
+}
+
+#introImg {
+    margin-top: -285px;
+    margin-left: -150px;
+    scale: 35%;
 
     animation: scaleUp 1s linear infinite;
     animation-play-state: paused;
@@ -91,12 +101,6 @@ nav .imageSection img {
 
     animation-iteration-count: 1;
     animation-fill-mode: both;
-}
-
-@keyframes scaleUp {
-    to {
-      transform: scale(50);
-    }
 }
 
 #imageContainer {
@@ -115,19 +119,11 @@ nav .imageSection img {
     display: inline-block;
 }
 
-/* WORK PAGE ELEMENTS START */
+/* WORK PAGE ELEMENTS END */
 
 /* GIF ELEMENTS START */
 
-#contactPageGif {
-    position: absolute;
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    left: 10.1%;
-}
-
-#homePageGif {
+.fullPageGif {
     position: absolute;
     background-size: cover;
     background-position: center;
