@@ -4,22 +4,17 @@ window.addEventListener('scroll', () => {
   }, false);
 
 //Changes the loaded background gif so it always starts fresh on reload  
-var page = (window.location.pathname).split("/").pop();
-switch (page){
-  case 'index.html':
-    document.getElementById('homePageGif').src="img/homepage.gif?a="+Math.random();
-    break;
-  case 'about.html':
-    document.getElementById('aboutPageGif').src="img/about_page.gif?a="+Math.random();
-    break;
-  case 'contact.html':
-    document.getElementById('contactPageGif').src="img/contact_page.gif?a="+Math.random();
-    break;
+try {
+  document.getElementById('homePageGif').src="img/homepage.gif?a="+Math.random();
+}
+catch (exception) {
+
 }
 
-//Messy code for button hovers. Need to update the timeout to work for all gifs since they're different lengths
+//change homegif so that it caches the loop without him falling but switches to it a second in, need good timing for that, also remove other gifs from the above code lol
 var keywords = ['about', 'work', 'contact'];
 var elements = [];
+var timeouts = [1700, 1980, 1880];
 var isPlaying = [false, false, false];
 var isMouseOn = [false, false, false];
 var currentTimeout;
@@ -27,10 +22,10 @@ var currentTimeout;
 keywords.forEach((keyword, index) => {
   let element = document.getElementById(keyword + 'Area');
   element.addEventListener('mouseenter', () => {
-    mouseOver(keyword, index);
+    mouseOver(keyword, index, timeouts[index]);
   }, false);
   element.addEventListener('mouseleave', () => {
-    mouseOut(keyword, index);
+    mouseOut(keyword, index, timeouts[index]);
   }, false);
   element.addEventListener('mouseover', () => {
     isMouseOn[index] = !isMouseOn[index];
@@ -38,22 +33,22 @@ keywords.forEach((keyword, index) => {
   elements.push(element);
 });
 
-function mouseOver(id, index) {
+function mouseOver(id, index, timeout) {
   if (isPlaying[index] == false) {
     isPlaying[index] = true;
-    startGif(id, index);
+    startGif(id, index, timeout);
   };
 };
 
-function mouseOut(id, index) {
+function mouseOut(id, index, timeout) {
   if (isPlaying[index] == false) {
     isPlaying[index] = true;
     clearTimeout(currentTimeout); //add index?
-    reverseGif(id, index);
+    reverseGif(id, index, timeout);
   };
 };
 
-function startGif(id, index) {
+function startGif(id, index, timeout) {
   var gif = document.getElementById(id);
 
   gif.src = 'img/' + id + '.gif';
@@ -63,15 +58,15 @@ function startGif(id, index) {
     if (isMouseOn[index] === false) {
       reverseGif(id);
     }
-  }, 1500);
+  }, timeout);
 }
 
-function reverseGif(id, index) {
+function reverseGif(id, index, timeout) {
   var gif = document.getElementById(id);
 
   gif.src = 'img/' + id + '_reverse.gif';
   currentTimeout = setTimeout(function() {
     gif.src = 'img/' + id + '_firstFrame.gif';
     isPlaying[index] = false;
-  }, 1500);
+  }, timeout);
 }

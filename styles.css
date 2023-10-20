@@ -9,6 +9,19 @@ body {
     overflow-x: hidden;
     margin: 0;
     font-family: Arial, sans-serif;
+
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
 }
 
 
@@ -23,13 +36,13 @@ nav {
 }
 
 nav img {
-    height: 120px;
+    height: 240px;
     padding-top: 20px;
-    padding-left: 60px;
+    padding-left: 140px;
 }
 
 nav .logoSection {
-    padding-top: 25px;
+    margin-top: -30px;
     float: left;
 }
 
@@ -52,13 +65,13 @@ nav .imageSection img {
 }
 
 #workNav img {
-    height: 120px;
+    height: 240px;
     padding-top: 20px;
-    padding-left: 60px;
+    padding-left: 140px;
 }
 
 #workNav .logoSection {
-    padding-top: 25px;
+    margin-top: -30px;
     float: left;
 }
 
@@ -84,12 +97,6 @@ nav .imageSection img {
 
 }
 
-@keyframes scaleUp {
-    to {
-      transform: scale(50);
-    }
-}
-
 #introImg {
     margin-top: -285px;
     margin-left: -150px;
@@ -103,14 +110,42 @@ nav .imageSection img {
     animation-fill-mode: both;
 }
 
+@keyframes scaleUp {
+    to {
+      transform: scale(50);
+    }
+}
+
 #imageContainer {
     max-width: 100%;
-    object-fit: contain;
+    object-fit: cover;
     overflow: hidden;
+    justify-content: center;
     display: block;
 }
 
-#imageContainer img {
+
+#imageContainer .tallImg {
+    border-style: solid;
+    border-width: 10px;
+    border-color: #e1a559;
+    width: 48.81%;
+    height: 100%;
+    object-fit: cover;
+    display: inline-block;
+}
+
+#imageContainer .threeWayImg {
+    border-style: solid;
+    border-width: 10px;
+    border-color: #e1a559;
+    width: 32.1%;
+    height: 100%;
+    object-fit: cover;
+    display: inline-block;
+}
+
+#imageContainer .longImg {
     border-style: solid;
     border-width: 10px;
     border-color: #e1a559;
@@ -119,11 +154,16 @@ nav .imageSection img {
     display: inline-block;
 }
 
+.comicStrip {
+    padding-top: 74px;
+}
+
 /* WORK PAGE ELEMENTS END */
 
 /* GIF ELEMENTS START */
 
 .fullPageGif {
+    scale: 90%;
     position: absolute;
     background-size: cover;
     background-position: center;
