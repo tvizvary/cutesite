@@ -24,66 +24,69 @@ body {
      }
 }
 
-
 /* MAIN ELEMENTS END */
+
+/* NAV ELEMENTS START */
 
 /* NAV ELEMENTS START */
 
 nav {
     overflow: hidden;
-    position: fixed;
+    position: absolute;
     z-index: 1;
+    width: 100%;
 }
 
 nav img {
-    height: 240px;
-    padding-top: 20px;
-    padding-left: 140px;
+    height: 13vw;
+    padding-top: 2vw;
+    padding-left: 8vw;
 }
 
 nav .logoSection {
-    margin-top: -30px;
+    margin-top: -3vw;
     float: left;
 }
 
 nav .imageSection {
-    margin-right: 50px;
+    margin-right: 4vw;
     float: right;
 }
 
 nav .imageSection img {
-    height: 200px;
-    margin-top: -40px;
-    padding-left: 190px;
-    padding-right: 70px;
+    height: 10vw;
+    margin-top: -3vw;
+    padding-left: 10vw;
+    padding-right: 4vw;
 }
 
 #workNav {
     overflow: hidden;
     display: block;
-    padding-right: 78px;
+    width: 100%;
 }
 
 #workNav img {
-    height: 240px;
-    padding-top: 20px;
-    padding-left: 140px;
+    height: 13vw;
+    padding-top: 2vw;
+    padding-left: 8vw;
 }
 
 #workNav .logoSection {
-    margin-top: -30px;
+    margin-top: -3vw;
     float: left;
 }
 
 #workNav .imageSection {
+    margin-right: 4vw;
     float: right;
 }
 
 #workNav .imageSection img {
-    height: 200px;
-    margin-top: -40px;
-    padding-left: 190px;
-    padding-right: 70px;
+    height: 10vw;
+    margin-top: -3vw;
+    padding-left: 10vw;
+    padding-right: 4vw;
 }
 
 /* NAV ELEMENTS END */
@@ -155,7 +158,12 @@ nav .imageSection img {
 }
 
 .comicStrip {
-    padding-top: 74px;
+    padding-top: 10px;
+}
+
+.mediumDesc {
+    text-align: center;
+    margin-bottom: 2vw;
 }
 
 /* WORK PAGE ELEMENTS END */

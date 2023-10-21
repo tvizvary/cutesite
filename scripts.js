@@ -3,15 +3,19 @@ window.addEventListener('scroll', () => {
     document.body.style.setProperty('--scroll',window.scrollY / (document.body.offsetHeight - window.innerHeight));
   }, false);
 
-//Changes the loaded background gif so it always starts fresh on reload  
+//maybe change scale so he runs off screen along edge?
 try {
   document.getElementById('homePageGif').src="img/homepage.gif?a="+Math.random();
+  setTimeout(function () {
+    document.getElementById('homePageGif').src="img/homepage_loop.gif";
+  }, 16500)
 }
 catch (exception) {
 
 }
 
-//change homegif so that it caches the loop without him falling but switches to it a second in, need good timing for that, also remove other gifs from the above code lol
+//still needs either tweaking or overhaul LOL
+
 var keywords = ['about', 'work', 'contact'];
 var elements = [];
 var timeouts = [1700, 1980, 1880];
@@ -23,12 +27,15 @@ keywords.forEach((keyword, index) => {
   let element = document.getElementById(keyword + 'Area');
   element.addEventListener('mouseenter', () => {
     mouseOver(keyword, index, timeouts[index]);
+    console.log(keyword + " enter");
   }, false);
   element.addEventListener('mouseleave', () => {
     mouseOut(keyword, index, timeouts[index]);
+    console.log(keyword + " leave");
   }, false);
   element.addEventListener('mouseover', () => {
     isMouseOn[index] = !isMouseOn[index];
+    console.log(keyword + " over");
   }, false);
   elements.push(element);
 });
@@ -56,7 +63,7 @@ function startGif(id, index, timeout) {
     gif.src = 'img/' + id + '_lastFrame.gif';
     isPlaying[index] = false;
     if (isMouseOn[index] === false) {
-      reverseGif(id);
+      reverseGif(id, index, timeout);
     }
   }, timeout);
 }
