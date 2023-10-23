@@ -95,15 +95,16 @@ nav .imageSection img {
 
 #starterText {
     display: inline-block;
+    width: 100vw;
     position: relative;
     overflow: hidden;
-
+    margin-bottom: 20vw;
 }
 
 #introImg {
-    margin-top: -285px;
-    margin-left: -150px;
-    scale: 35%;
+    margin-top: 1.4vw;
+    margin-left: 27vw;
+    height: 26vw;
 
     animation: scaleUp 1s linear infinite;
     animation-play-state: paused;
@@ -115,7 +116,7 @@ nav .imageSection img {
 
 @keyframes scaleUp {
     to {
-      transform: scale(50);
+        transform: scale(50);
     }
 }
 
@@ -127,12 +128,11 @@ nav .imageSection img {
     display: block;
 }
 
-
 #imageContainer .tallImg {
     border-style: solid;
-    border-width: 10px;
+    border-width: 0.5vw;
     border-color: #e1a559;
-    width: 48.81%;
+    width: 48.81vw;
     height: 100%;
     object-fit: cover;
     display: inline-block;
@@ -140,9 +140,9 @@ nav .imageSection img {
 
 #imageContainer .threeWayImg {
     border-style: solid;
-    border-width: 10px;
+    border-width: 0.5vw;
     border-color: #e1a559;
-    width: 32.1%;
+    width: 32.1vw;
     height: 100%;
     object-fit: cover;
     display: inline-block;
@@ -150,15 +150,15 @@ nav .imageSection img {
 
 #imageContainer .longImg {
     border-style: solid;
-    border-width: 10px;
+    border-width: 0.5vw;
     border-color: #e1a559;
     height: 100%;
-    width: 99%;
+    width: 99vw;
     display: inline-block;
 }
 
 .comicStrip {
-    padding-top: 10px;
+    padding-top: 0.52vw;
 }
 
 .mediumDesc {
@@ -171,12 +171,12 @@ nav .imageSection img {
 /* GIF ELEMENTS START */
 
 .fullPageGif {
-    scale: 90%;
+    scale: 80%;
     position: absolute;
     background-size: cover;
     background-position: center;
     height: 100vh;
-    left: 10.1%;
+    width: 100vw;
 }
 
 /* GIF ELEMENTS END */
