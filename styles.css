@@ -166,6 +166,34 @@ nav .imageSection img {
     margin-bottom: 2vw;
 }
 
+.individualImage {
+    position: relative;
+    display: inline-block;
+}
+
+.imageCaption {
+    display: flex;
+    box-shadow: 0px 0px 150px white inset, 0px 0px 10px white;
+    position: absolute;
+    width: 50%;
+    height: 7%;
+    bottom: 2%;
+    left: 25%;
+    margin: 0;
+    padding-top: 0.5vw;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+}
+
+.longImg:hover + .imageCaption,
+.tallImg:hover + .imageCaption,
+.individualImage a:hover + .imageCaption,
+.imageCaption:hover {
+    opacity: 1;
+}
+
 /* WORK PAGE ELEMENTS END */
 
 /* GIF ELEMENTS START */
