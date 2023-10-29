@@ -3,6 +3,7 @@
 
 html {
     background-color: #e7be6e;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -24,9 +25,16 @@ body {
      }
 }
 
-/* MAIN ELEMENTS END */
+footer, footer a:visited, footer a:link{
+    text-align: center;
+    padding-bottom: 5vw;
+    color: #8a88be;
+    font-size: 2.0em;
+    font-family: comic sans ms;
+    text-decoration: none;
+}
 
-/* NAV ELEMENTS START */
+/* MAIN ELEMENTS END */
 
 /* NAV ELEMENTS START */
 
@@ -167,11 +175,33 @@ nav .imageSection img {
 }
 
 .individualImage {
+    scale: 75%;
     position: relative;
     display: inline-block;
 }
 
 .imageCaption {
+    display: flex;
+    box-shadow: 0px 0px 500px 300px white inset, 0px 0px 50px 50px white;
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    bottom: 10%;
+    left: 10%;
+    margin: 0;
+    padding-top: 0.5vw;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+
+    color: black;
+    font-size: 3.0em;
+    font-family: comic sans ms;
+    text-shadow: 0px 0px 20px white;
+}
+
+/* .imageCaption {
     display: flex;
     box-shadow: 0px 0px 150px white inset, 0px 0px 10px white;
     position: absolute;
@@ -185,13 +215,32 @@ nav .imageSection img {
     justify-content: center;
     opacity: 0;
     transition: opacity 300ms ease-in-out;
-}
+} */
 
 .longImg:hover + .imageCaption,
 .tallImg:hover + .imageCaption,
 .individualImage a:hover + .imageCaption,
 .imageCaption:hover {
     opacity: 1;
+}
+
+#imageViewer {
+    z-index: 9999;
+    display: none;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: contain;
+    background-repeat: no-repeat no-repeat;
+    background-position: center center;
+    background-color: rgba(255,255,255, 0.9);
+
+    animation: fadeInAnimation ease 500ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 /* WORK PAGE ELEMENTS END */

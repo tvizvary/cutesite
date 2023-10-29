@@ -14,6 +14,20 @@ catch (exception) {
 
 }
 
+//work image zoom functionality
+function getPics() {} //just for this demo
+const imgs = document.querySelectorAll('.individualImage img');
+const imageViewer = document.querySelector('#imageViewer');
+
+imgs.forEach(img => {
+  if (img.alt != 'noViewer') {
+    img.parentElement.addEventListener('click', function() {
+      imageViewer.style.backgroundImage = 'url(' + img.src + ')';
+      imageViewer.style.display = 'block';
+    });
+  }
+});
+
 //still needs either tweaking or overhaul LOL
 
 var keywords = ['about', 'work', 'contact'];
