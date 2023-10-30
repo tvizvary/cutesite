@@ -183,12 +183,12 @@ nav .imageSection img {
 
 .imageCaption {
     display: flex;
-    box-shadow: 0px 0px 500px 300px white inset, 0px 0px 50px 50px white;
+    box-shadow: 0px 0px 999px 999px rgba(255,255,255, 0.9) inset, 0px 0px 5px 5px rgba(255,255,255, 0.9);
     position: absolute;
-    width: 80%;
-    height: 80%;
-    bottom: 10%;
-    left: 10%;
+    width: 100%;
+    height: 100%;
+    bottom: 0%;
+    left: 0%;
     margin: 0;
     padding-top: 0.5vw;
     align-items: center;
@@ -197,26 +197,10 @@ nav .imageSection img {
     transition: opacity 300ms ease-in-out;
 
     color: black;
-    font-size: 3.0em;
+    font-size: 2.8em;
     font-family: comic sans ms;
-    text-shadow: 0px 0px 20px white;
+    text-align: center;
 }
-
-/* .imageCaption {
-    display: flex;
-    box-shadow: 0px 0px 150px white inset, 0px 0px 10px white;
-    position: absolute;
-    width: 50%;
-    height: 7%;
-    bottom: 2%;
-    left: 25%;
-    margin: 0;
-    padding-top: 0.5vw;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 300ms ease-in-out;
-} */
 
 .longImg:hover + .imageCaption,
 .tallImg:hover + .imageCaption,
@@ -226,7 +210,7 @@ nav .imageSection img {
 }
 
 #imageViewer {
-    z-index: 9999;
+    z-index: 1;
     display: none;
     opacity: 0;
     position: fixed;
@@ -237,11 +221,38 @@ nav .imageSection img {
     background-size: contain;
     background-repeat: no-repeat no-repeat;
     background-position: center center;
-    background-color: rgba(255,255,255, 0.9);
+    background-color: rgba(255,255,255, 1.0);
+    user-select: none;
 
     animation: fadeInAnimation ease 500ms;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+}
+
+#leftArrow, #leftArrow:visited, #leftArrow:link {
+    position: relative;
+    float: left;
+    text-align: center;
+    top: 35%;
+    padding-left: 1vw;
+    color: #8a88be;
+    font-size: 10.0em;
+    font-family: comic sans ms;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#rightArrow, #rightArrow:visited, #rightArrow:link {
+    position: relative;
+    float: right;
+    text-align: center;
+    top: 35%;
+    padding-right: 1vw;
+    color: #8a88be;
+    font-size: 10.0em;
+    font-family: comic sans ms;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /* WORK PAGE ELEMENTS END */
@@ -249,12 +260,13 @@ nav .imageSection img {
 /* GIF ELEMENTS START */
 
 .fullPageGif {
-    scale: 80%;
+    scale: 95%;
     position: absolute;
     background-size: cover;
     background-position: center;
     height: 100vh;
-    width: 100vw;
+    width: 125vw;
+    right: -10%;
 }
 
 /* GIF ELEMENTS END */
