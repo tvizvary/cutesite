@@ -12,37 +12,21 @@
     <body>
         <div id="workNav">
             <div class="logoSection">
-                <img src="img/logo.png" alt="logo" usemap="#logoMap">
+                <a href="index.html"><img src="img/logo.png" alt="logo"></a>
             </div>
             <div class="imageSection">
-                <img id="about" src="img/about_firstFrame.gif" alt="about" usemap="#aboutMap">
-                <img id="work" src="img/work_firstFrame.gif" alt="work" usemap="#workMap">
-                <img id="contact" src="img/contact_firstFrame.gif" alt="contact" usemap="#contactMap">
+                <a id="aboutArea" href="about.html"><img id="about" src="img/about_firstFrame.gif" alt="about"></a>
+                <a id="workArea" href="work.html"><img id="work" src="img/work_firstFrame.gif" alt="work"></a>
+                <a id="contactArea" href="contact.html"><img id="contact" src="img/contact_firstFrame.gif" alt="contact"></a>
             </div>
         </div>
         <div id="imageContainer" class="comicStrip">
-            <img class="threeWayImg" src="img/lurking(1).png">
-            <img class="threeWayImg" src="img/lurking(2).png">
-            <img class="threeWayImg" src="img/lurking(3).png">
+            <div class="individualImage"><img class="threeWayImg" src="img/lurking_1.png"></div>
+            <div class="individualImage"><img class="threeWayImg" src="img/lurking_2.png"></div>
+            <div class="individualImage"><img class="threeWayImg" src="img/lurking_3.png"></div>
         </div>
-<<<<<<< Updated upstream
-=======
-        <!-- <div id="imageViewer" onclick="this.style.display='none';"></div> -->
->>>>>>> Stashed changes
+        <div class="mediumDesc"><i>Lurking - 8"x8", Procreate</i></div>
+        <div id="imageViewer" onclick="this.style.display='none';"><a id="leftArrow">&lt;</a><a id="rightArrow">&gt;</a></div>
     </body>
-    <div name="mapDiv">
-        <map name="logoMap">
-            <area shape="rect" coords="0,0,450,170" href="index.html">
-        </map>
-        <map name="aboutMap">
-            <area id="aboutArea" shape="rect" coords="0,0,450,170" href="about.html">
-        </map>
-        <map name="workMap">
-            <area id="workArea" shape="rect" coords="0,0,450,170" href="work.html">
-        </map>
-        <map name="contactMap">
-            <area id="contactArea" shape="rect" coords="0,0,450,170" href="contact.html">
-        </map>
-    </div>
     <script src="scripts.js"></script>
 </html>

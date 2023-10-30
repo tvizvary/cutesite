@@ -3,6 +3,7 @@
 
 html {
     background-color: #e7be6e;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -24,9 +25,16 @@ body {
      }
 }
 
-/* MAIN ELEMENTS END */
+footer, footer a:visited, footer a:link{
+    text-align: center;
+    padding-bottom: 5vw;
+    color: #8a88be;
+    font-size: 2.0em;
+    font-family: comic sans ms;
+    text-decoration: none;
+}
 
-/* NAV ELEMENTS START */
+/* MAIN ELEMENTS END */
 
 /* NAV ELEMENTS START */
 
@@ -34,7 +42,7 @@ nav {
     overflow: hidden;
     position: absolute;
     z-index: 1;
-    width: 100%;
+    width: 100vw;
 }
 
 nav img {
@@ -63,7 +71,7 @@ nav .imageSection img {
 #workNav {
     overflow: hidden;
     display: block;
-    width: 100%;
+    width: 100vw;
 }
 
 #workNav img {
@@ -121,7 +129,8 @@ nav .imageSection img {
 }
 
 #imageContainer {
-    max-width: 100%;
+    max-width: 100vw;
+    width: 100vw;
     object-fit: cover;
     overflow: hidden;
     justify-content: center;
@@ -167,6 +176,7 @@ nav .imageSection img {
 }
 
 .individualImage {
+    scale: 75%;
     position: relative;
     display: inline-block;
 }
@@ -175,38 +185,25 @@ nav .imageSection img {
     display: none;
 }
 
-/* TEMP TURNED OFF */
-/* .imageCaption {
+.imageCaption {
     display: flex;
-<<<<<<< Updated upstream
-    box-shadow: 0px 0px 150px white inset, 0px 0px 10px white;
+    box-shadow: 0px 0px 999px 999px rgba(255,255,255, 0.9) inset, 0px 0px 5px 5px rgba(255,255,255, 0.9);
     position: absolute;
-    width: 50%;
-    height: 7%;
-    bottom: 2%;
-    left: 25%;
-=======
-    box-shadow: 0px 0px 500px 300px white inset, 0px 0px 50px 50px white;
-    position: absolute;
-    width: 80%;
-    height: 80%;
-    bottom: 10%;
-    left: 10%;
->>>>>>> Stashed changes
+    width: 100%;
+    height: 100%;
+    bottom: 0%;
+    left: 0%;
     margin: 0;
     padding-top: 0.5vw;
     align-items: center;
     justify-content: center;
     opacity: 0;
     transition: opacity 300ms ease-in-out;
-<<<<<<< Updated upstream
-=======
 
     color: black;
-    font-size: 3.0em;
+    font-size: 2.8em;
     font-family: comic sans ms;
-    text-shadow: 0px 0px 20px white;
->>>>>>> Stashed changes
+    text-align: center;
 }
 
 .longImg:hover + .imageCaption,
@@ -216,10 +213,8 @@ nav .imageSection img {
     opacity: 1;
 }
 
-<<<<<<< Updated upstream
-=======
 #imageViewer {
-    z-index: 9999;
+    z-index: 1;
     display: none;
     opacity: 0;
     position: fixed;
@@ -230,25 +225,51 @@ nav .imageSection img {
     background-size: contain;
     background-repeat: no-repeat no-repeat;
     background-position: center center;
-    background-color: rgba(255,255,255, 0.9);
+    background-color: rgba(255,255,255, 1.0);
+    user-select: none;
 
     animation: fadeInAnimation ease 500ms;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-} */
+}
 
->>>>>>> Stashed changes
+#leftArrow, #leftArrow:visited, #leftArrow:link {
+    position: relative;
+    float: left;
+    text-align: center;
+    top: 35%;
+    padding-left: 1vw;
+    color: #8a88be;
+    font-size: 10.0em;
+    font-family: comic sans ms;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#rightArrow, #rightArrow:visited, #rightArrow:link {
+    position: relative;
+    float: right;
+    text-align: center;
+    top: 35%;
+    padding-right: 1vw;
+    color: #8a88be;
+    font-size: 10.0em;
+    font-family: comic sans ms;
+    text-decoration: none;
+    cursor: pointer;
+}
 /* WORK PAGE ELEMENTS END */
 
 /* GIF ELEMENTS START */
 
 .fullPageGif {
-    scale: 80%;
+    scale: 95%;
     position: absolute;
     background-size: cover;
     background-position: center;
     height: 100vh;
-    width: 100vw;
+    width: 125vw;
+    right: -10%;
 }
 
 /* GIF ELEMENTS END */

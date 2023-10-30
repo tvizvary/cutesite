@@ -3,7 +3,6 @@ window.addEventListener('scroll', () => {
     document.body.style.setProperty('--scroll',window.scrollY / (document.body.offsetHeight - window.innerHeight));
   }, false);
 
-//maybe change scale so he runs off screen along edge?
 try {
   document.getElementById('homePageGif').src="img/homepage.gif?a="+Math.random();
   setTimeout(function () {
@@ -14,8 +13,61 @@ catch (exception) {
 
 }
 
-//still needs either tweaking or overhaul LOL
+//imageViewer functionality
+const imgs = document.querySelectorAll('.individualImage img');
+const imageViewer = document.querySelector('#imageViewer');
+const leftArrow = document.querySelector('#leftArrow');
+const rightArrow = document.querySelector('#rightArrow');
+let currentIndex = 0;
 
+imgs.forEach((img, index) => {
+  if (img.alt !== 'noViewer') {
+    img.parentElement.addEventListener('click', function (event) {
+      event.stopPropagation();
+      currentIndex = index;
+      showImage(currentIndex);
+      scrollToImage(img.parentElement);
+    });
+  }
+});
+
+function showImage(index) {
+  const selectedImg = imgs[index];
+  imageViewer.style.backgroundImage = 'url(' + selectedImg.src + ')';
+  imageViewer.style.display = 'block';
+}
+
+function showNextImage() {
+  currentIndex = (currentIndex + 1) % imgs.length;
+  showImage(currentIndex);
+  scrollToImage(imgs[currentIndex].parentElement);
+}
+
+function showPrevImage() {
+  currentIndex = (currentIndex - 1 + imgs.length) % imgs.length;
+  showImage(currentIndex);
+  scrollToImage(imgs[currentIndex].parentElement);
+}
+
+function scrollToImage(element) {
+  element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+leftArrow.addEventListener('click', function (event) {
+  event.stopPropagation();
+  showPrevImage();
+});
+
+rightArrow.addEventListener('click', function (event) {
+  event.stopPropagation();
+  showNextImage();
+});
+
+imageViewer.addEventListener('click', function () {
+  this.style.display = 'none';
+});
+
+//still needs either tweaking or overhaul LOL
 var keywords = ['about', 'work', 'contact'];
 var elements = [];
 var timeouts = [1700, 1980, 1880];
