@@ -42,7 +42,7 @@ nav {
     overflow: hidden;
     position: absolute;
     z-index: 1;
-    width: 100%;
+    width: 100vw;
 }
 
 nav img {
@@ -71,7 +71,7 @@ nav .imageSection img {
 #workNav {
     overflow: hidden;
     display: block;
-    width: 100%;
+    width: 100vw;
 }
 
 #workNav img {
@@ -129,7 +129,8 @@ nav .imageSection img {
 }
 
 #imageContainer {
-    max-width: 100%;
+    max-width: 100vw;
+    width: 100vw;
     object-fit: cover;
     overflow: hidden;
     justify-content: center;

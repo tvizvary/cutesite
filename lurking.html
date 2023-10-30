@@ -12,12 +12,12 @@
     <body>
         <div id="workNav">
             <div class="logoSection">
-                <img src="img/logo.png" alt="logo" usemap="#logoMap">
+                <a href="index.html"><img src="img/logo.png" alt="logo"></a>
             </div>
             <div class="imageSection">
-                <img id="about" src="img/about_firstFrame.gif" alt="about" usemap="#aboutMap">
-                <img id="work" src="img/work_firstFrame.gif" alt="work" usemap="#workMap">
-                <img id="contact" src="img/contact_firstFrame.gif" alt="contact" usemap="#contactMap">
+                <a id="aboutArea" href="about.html"><img id="about" src="img/about_firstFrame.gif" alt="about"></a>
+                <a id="workArea" href="work.html"><img id="work" src="img/work_firstFrame.gif" alt="work"></a>
+                <a id="contactArea" href="contact.html"><img id="contact" src="img/contact_firstFrame.gif" alt="contact"></a>
             </div>
         </div>
         <div id="imageContainer" class="comicStrip">
@@ -27,19 +27,5 @@
         </div>
         <div id="imageViewer" onclick="this.style.display='none';"></div>
     </body>
-    <div name="mapDiv">
-        <map name="logoMap">
-            <area shape="rect" coords="0,0,450,170" href="index.html">
-        </map>
-        <map name="aboutMap">
-            <area id="aboutArea" shape="rect" coords="0,0,450,170" href="about.html">
-        </map>
-        <map name="workMap">
-            <area id="workArea" shape="rect" coords="0,0,450,170" href="work.html">
-        </map>
-        <map name="contactMap">
-            <area id="contactArea" shape="rect" coords="0,0,450,170" href="contact.html">
-        </map>
-    </div>
     <script src="scripts.js"></script>
 </html>
