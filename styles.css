@@ -182,6 +182,10 @@ nav .imageSection img {
 }
 
 .imageCaption {
+    display: none;
+}
+
+.imageCaption {
     display: flex;
     box-shadow: 0px 0px 999px 999px rgba(255,255,255, 0.9) inset, 0px 0px 5px 5px rgba(255,255,255, 0.9);
     position: absolute;
@@ -254,7 +258,6 @@ nav .imageSection img {
     text-decoration: none;
     cursor: pointer;
 }
-
 /* WORK PAGE ELEMENTS END */
 
 /* GIF ELEMENTS START */
