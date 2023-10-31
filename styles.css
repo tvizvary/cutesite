@@ -271,4 +271,16 @@ nav .imageSection img {
     width: 100vw;
 }
 
+@media only screen and (max-width: 768px) {
+    .fullPageGif {
+        scale: 60%;
+        position: absolute;
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        width: 200vw;
+        left: -50%;
+    }
+}
+
 /* GIF ELEMENTS END */
