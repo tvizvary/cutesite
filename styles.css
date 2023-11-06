@@ -353,15 +353,27 @@ nav .imageSection img {
 
 @media only screen and (max-width: 768px) {
     #starterText {
-        scale: 200%;
+        scale: 100%;
         display: inline-block;
         width: 100vw;
         position: relative;
         overflow: hidden;
         margin-bottom: 10vw;
         margin-top: 15vw;
-        left: 5%;
         top: 5%;
+    }
+
+    #introImg {
+        margin-top: 1.4vw;
+        margin-left: 13vw;
+        height: 46vw;
+    
+        animation: scaleUp 1s linear infinite;
+        animation-play-state: paused;
+        animation-delay: calc(var(--scroll) * -1s);
+    
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
     }
 
     .imageCaption {
@@ -387,7 +399,7 @@ nav .imageSection img {
     }
 
     .individualImage {
-        scale: 75%;
+        scale: 90%;
         position: relative;
         display: inline-block;
     }
