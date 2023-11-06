@@ -14,7 +14,8 @@ catch (exception) {
 }
 
 //imageViewer functionality
-const imgs = document.querySelectorAll('.individualImage img');
+try {
+  const imgs = document.querySelectorAll('.individualImage img');
 const imageViewer = document.querySelector('#imageViewer');
 const leftArrow = document.querySelector('#leftArrow');
 const rightArrow = document.querySelector('#rightArrow');
@@ -66,6 +67,11 @@ rightArrow.addEventListener('click', function (event) {
 imageViewer.addEventListener('click', function () {
   this.style.display = 'none';
 });
+}
+
+catch (exception) {
+  console.log(exception);
+}
 
 //still needs either tweaking or overhaul LOL
 var keywords = ['about', 'work', 'contact'];
