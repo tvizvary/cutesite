@@ -470,15 +470,48 @@ nav .imageSection img {
     width: 100vw;
 }
 
+#homePageGifMobile, #aboutPageGifMobile, #contactPageGifMobile {
+    display: none;
+}
+
+
+
 @media only screen and (max-width: 768px) {
     .fullPageGif {
-        scale: 60%;
+        display: none;
+    }
+
+    #homePageGifMobile {
+        display: inline;
+        scale: 100%;
         position: absolute;
         background-size: cover;
         background-position: center;
         height: 100vh;
-        width: 200vw;
-        left: -50%;
+        width: 100vw;
+        top: -10%;
+    }
+
+    #aboutPageGifMobile {
+        display: inline;
+        scale: 100%;
+        position: absolute;
+        background-size: cover;
+        background-position: center;
+        height: 90vh;
+        width: 100vw;
+        top: 14%;
+    }
+
+    #contactPageGifMobile {
+        display: inline;
+        scale: 100%;
+        position: absolute;
+        background-size: cover;
+        background-position: center;
+        height: 90vh;
+        width: 100vw;
+        top: 10%;
     }
 }
 
