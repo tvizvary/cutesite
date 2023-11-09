@@ -399,6 +399,7 @@ nav .imageSection img {
     }
 
     .individualImage {
+        z-index: 1;
         scale: 90%;
         position: relative;
         display: inline-block;
@@ -498,9 +499,8 @@ nav .imageSection img {
         position: absolute;
         background-size: cover;
         background-position: center;
-        height: 90vh;
+        height: 100vh;
         width: 100vw;
-        top: 14%;
     }
 
     #contactPageGifMobile {
