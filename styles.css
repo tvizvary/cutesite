@@ -30,7 +30,7 @@ footer, footer a:visited, footer a:link{
     padding-bottom: 5vw;
     color: #8a88be;
     font-size: 2.0em;
-    font-family: comic sans ms;
+    font-family: comic sans ms, ChalkboardSE-Regular;
     text-decoration: none;
 }
 
@@ -40,7 +40,7 @@ footer, footer a:visited, footer a:link{
         padding-bottom: 5vw;
         color: #8a88be;
         font-size: 1.6em;
-        font-family: comic sans ms;
+        font-family: comic sans ms, ChalkboardSE-Regular;
         text-decoration: none;
     }
 }
@@ -294,7 +294,7 @@ nav .imageSection img {
 
     color: black;
     font-size: 2.5em;
-    font-family: comic sans ms;
+    font-family: comic sans ms, ChalkboardSE-Regular;
     text-align: center;
 }
 
@@ -333,7 +333,7 @@ nav .imageSection img {
     padding-left: 1vw;
     color: #8a88be;
     font-size: 10.0em;
-    font-family: comic sans ms;
+    font-family: comic sans ms, ChalkboardSE-Regular;
     text-decoration: none;
     cursor: pointer;
 }
@@ -346,7 +346,7 @@ nav .imageSection img {
     padding-right: 1vw;
     color: #8a88be;
     font-size: 10.0em;
-    font-family: comic sans ms;
+    font-family: comic sans ms, ChalkboardSE-Regular;
     text-decoration: none;
     cursor: pointer;
 }
@@ -393,7 +393,7 @@ nav .imageSection img {
     
         color: black;
         font-size: 6vw;
-        font-family: comic sans ms;
+        font-family: comic sans ms, ChalkboardSE-Regular;
         text-align: center;
         word-wrap: normal;
     }
@@ -433,7 +433,7 @@ nav .imageSection img {
         padding-left: 1vw;
         color: #8a88be;
         font-size: 10.0em;
-        font-family: comic sans ms;
+        font-family: comic sans ms, ChalkboardSE-Regular;
         text-decoration: none;
         cursor: pointer;
     }
@@ -446,7 +446,7 @@ nav .imageSection img {
         padding-right: 1vw;
         color: #8a88be;
         font-size: 10.0em;
-        font-family: comic sans ms;
+        font-family: comic sans ms, ChalkboardSE-Regular;
         text-decoration: none;
         cursor: pointer;
     }
