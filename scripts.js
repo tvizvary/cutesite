@@ -46,16 +46,21 @@ try {
     });
   }
 
-  function showImage(index) {
-    console.log(index + " showImage Called");
-    const selectedImg = imgs[index];
-    console.log(selectedImg.src);
-    imageViewer.style.backgroundImage = 'url(' + selectedImg.src + ')';
-    imageViewer.style.display = 'block';
-    console.log(imageViewer.style.display);
-    if (imageViewer.style.display === 'block') {
-      console.log("it aint block");
+  try {
+    function showImage(index) {
+      console.log(index + " showImage Called");
+      const selectedImg = imgs[index];
+      console.log(selectedImg.src);
+      imageViewer.style.backgroundImage = 'url(' + selectedImg.src + ')';
+      imageViewer.style.display = 'block';
+      console.log(imageViewer.style.display);
+      if (imageViewer.style.display !=='block') {
+        console.log("it aint block");
+      }
     }
+  }
+  catch (exception) {
+    console.log(exception);
   }
 
   function showNextImage() {
@@ -84,9 +89,9 @@ try {
     showNextImage();
   });
 
-  imageViewer.addEventListener('click', function () {
-    this.style.display = 'none';
-  });
+  // imageViewer.addEventListener('click', function () {
+  //   this.style.display = 'none';
+  // });
   }
 
 catch (exception) {
