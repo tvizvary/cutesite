@@ -38,6 +38,7 @@ try {
         img.parentElement.addEventListener(eventNames[i], function (event) {
           console.log("img " + i + " clicked");
           currentIndex = index;
+          event.stopPropagation();
           showImage(currentIndex);
           scrollToImage(img.parentElement);
         });
@@ -46,6 +47,7 @@ try {
   }
 
   function showImage(index) {
+    console.log(index + " showImage Called");
     const selectedImg = imgs[index];
     imageViewer.style.backgroundImage = 'url(' + selectedImg.src + ')';
     imageViewer.style.display = 'block';
