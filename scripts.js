@@ -51,6 +51,7 @@ try {
     const selectedImg = imgs[index];
     imageViewer.style.backgroundImage = 'url(' + selectedImg.src + ')';
     imageViewer.style.display = 'block';
+    console.log(imageViewer.style.display);
   }
 
   function showNextImage() {
