@@ -25,7 +25,7 @@ catch (exception) {
 
 //imageViewer functionality
 try {
-  const eventNames = ['touchend']
+  const eventNames = ['click']
   const imgs = document.querySelectorAll('.individualImage img');
   const imageViewer = document.querySelector('#imageViewer');
   const leftArrow = document.querySelector('#leftArrow');
