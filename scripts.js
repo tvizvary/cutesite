@@ -36,6 +36,7 @@ try {
     imgs.forEach((img, index) => {
       if (img.alt !== 'noViewer') {
         img.parentElement.addEventListener(eventNames[i], function (event) {
+          console.log("img " + i + " clicked");
           event.stopPropagation();
           currentIndex = index;
           showImage(currentIndex);
