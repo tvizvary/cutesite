@@ -49,9 +49,13 @@ try {
   function showImage(index) {
     console.log(index + " showImage Called");
     const selectedImg = imgs[index];
+    console.log(selectedImg.src);
     imageViewer.style.backgroundImage = 'url(' + selectedImg.src + ')';
     imageViewer.style.display = 'block';
     console.log(imageViewer.style.display);
+    if (imageViewer.style.display === 'block') {
+      console.log("it aint block");
+    }
   }
 
   function showNextImage() {
@@ -151,16 +155,3 @@ function reverseGif(id, index, timeout) {
     isPlaying[index] = false;
   }, timeout);
 }
-
-function logEvent(event) {
-  console.log(event.type);
-}
-
-// Get all event types
-const allEventTypes = Object.keys(window).filter(key => /^on/.test(key));
-const pic = document.getElementById("test");
-
-// Attach event listeners for all event types
-allEventTypes.forEach(eventType => {
-  pic.addEventListener(eventType.slice(2), logEvent);
-});
