@@ -30,8 +30,19 @@ footer, footer a:visited, footer a:link{
     padding-bottom: 5vw;
     color: #8a88be;
     font-size: 2.0em;
-    font-family: comic sans ms;
+    font-family: comic sans ms, ChalkboardSE-Regular;
     text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+    footer, footer a:visited, footer a:link{
+        text-align: center;
+        padding-bottom: 5vw;
+        color: #8a88be;
+        font-size: 1.6em;
+        font-family: comic sans ms, ChalkboardSE-Regular;
+        text-decoration: none;
+    }
 }
 
 /* MAIN ELEMENTS END */
@@ -46,9 +57,10 @@ nav {
 }
 
 nav img {
+    position: relative;
     height: 13vw;
-    padding-top: 2vw;
-    padding-left: 8vw;
+    top: 2vw;
+    left: 8vw;
 }
 
 nav .logoSection {
@@ -63,9 +75,10 @@ nav .imageSection {
 
 nav .imageSection img {
     height: 10vw;
+    float: left;
     margin-top: -3vw;
-    padding-left: 10vw;
-    padding-right: 4vw;
+    margin-right: 15vw;
+    left: 12vw;
 }
 
 #workNav {
@@ -75,9 +88,10 @@ nav .imageSection img {
 }
 
 #workNav img {
+    position: relative;
     height: 13vw;
-    padding-top: 2vw;
-    padding-left: 8vw;
+    top: 2vw;
+    left: 8vw;
 }
 
 #workNav .logoSection {
@@ -92,9 +106,87 @@ nav .imageSection img {
 
 #workNav .imageSection img {
     height: 10vw;
+    float: left;
     margin-top: -3vw;
-    padding-left: 10vw;
-    padding-right: 4vw;
+    margin-right: 15vw;
+    left: 12vw;
+}
+
+@media only screen and (max-width: 768px) {
+    nav {
+        overflow: hidden;
+        position: absolute;
+        z-index: 1;
+        width: 100vw;
+        padding-top: 5vw;
+        padding-bottom: 7vw;
+    }
+
+    nav img {
+        scale: 188%;
+        position: relative;
+        height: 13vw;
+        top: 2vw;
+        left: 8vw;
+    }
+    
+    nav .logoSection {
+        margin-top: -3vw;
+        float: left;
+		left: 34vw;
+		position: relative;
+    }
+    
+    nav .imageSection {
+        margin-right: 5vw;
+        float: right;
+		margin-top: 5vw;
+    }
+    
+    nav .imageSection img {
+        height: 10vw;
+        float: left;
+        margin-top: -3vw;
+        margin-right: 20vw;
+        left: 12vw;
+    }
+
+    #workNav {
+        overflow: hidden;
+        display: block;
+        width: 100vw;
+        padding-top: 5vw;
+        padding-bottom: 7vw;
+    }
+    
+    #workNav img {
+        scale: 188%;
+        position: relative;
+        height: 13vw;
+        top: 2vw;
+        left: 8vw;
+    }
+    
+    #workNav .logoSection {
+        margin-top: -3vw;
+        float: left;
+        left: 34vw;
+		position: relative;
+    }
+    
+    #workNav .imageSection {
+        margin-right: 4vw;
+        float: right;
+        margin-top: 5vw;
+    }
+    
+    #workNav .imageSection img {
+        height: 10vw;
+        float: left;
+        margin-top: -3vw;
+        margin-right: 20vw;
+        left: 12vw;
+    }
 }
 
 /* NAV ELEMENTS END */
@@ -202,7 +294,7 @@ nav .imageSection img {
 
     color: black;
     font-size: 2.5em;
-    font-family: comic sans ms;
+    font-family: comic sans ms, ChalkboardSE-Regular;
     text-align: center;
 }
 
@@ -241,7 +333,7 @@ nav .imageSection img {
     padding-left: 1vw;
     color: #8a88be;
     font-size: 10.0em;
-    font-family: comic sans ms;
+    font-family: comic sans ms, ChalkboardSE-Regular;
     text-decoration: none;
     cursor: pointer;
 }
@@ -254,10 +346,118 @@ nav .imageSection img {
     padding-right: 1vw;
     color: #8a88be;
     font-size: 10.0em;
-    font-family: comic sans ms;
+    font-family: comic sans ms, ChalkboardSE-Regular;
     text-decoration: none;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 768px) {
+    #starterText {
+        scale: 100%;
+        display: inline-block;
+        width: 100vw;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 10vw;
+        margin-top: 15vw;
+        top: 5%;
+    }
+
+    #introImg {
+        margin-top: 1.4vw;
+        margin-left: 13vw;
+        height: 46vw;
+    
+        animation: scaleUp 1s linear infinite;
+        animation-play-state: paused;
+        animation-delay: calc(var(--scroll) * -1s);
+    
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+    }
+
+    .imageCaption {
+        display: flex;
+        box-shadow: 0px 0px 999px 999px rgba(255,255,255, 0.9) inset, 0px 0px 5px 5px rgba(255,255,255, 0.9);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        bottom: 0%;
+        left: 0%;
+        margin: 0;
+        padding-top: 0.5vw;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 300ms ease-in-out;
+    
+        color: black;
+        font-size: 6vw;
+        font-family: comic sans ms, ChalkboardSE-Regular;
+        text-align: center;
+        word-wrap: normal;
+    }
+
+    .individualImage {
+        z-index: 1;
+        scale: 90%;
+        position: relative;
+        display: inline-block;
+    }
+
+    #imageContainer .tallImg {
+        border-style: solid;
+        border-width: 0.5vw;
+        border-color: #e1a559;
+        width: 100vw;
+        height: 100%;
+        object-fit: cover;
+        display: inline-block;
+    }
+
+    #imageContainer .threeWayImg {
+        border-style: solid;
+        border-width: 0.5vw;
+        border-color: #e1a559;
+        width: 100vw;
+        height: 100%;
+        object-fit: cover;
+        display: inline-block;
+    }
+
+    #leftArrow, #leftArrow:visited, #leftArrow:link {
+        position: relative;
+        float: left;
+        text-align: center;
+        top: 75%;
+        padding-left: 1vw;
+        color: #8a88be;
+        font-size: 10.0em;
+        font-family: comic sans ms, ChalkboardSE-Regular;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    
+    #rightArrow, #rightArrow:visited, #rightArrow:link {
+        position: relative;
+        float: right;
+        text-align: center;
+        top: 75%;
+        padding-right: 1vw;
+        color: #8a88be;
+        font-size: 10.0em;
+        font-family: comic sans ms, ChalkboardSE-Regular;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .mediumDesc {
+        text-align: center;
+        margin-bottom: 2vw;
+        font-size: 3vw;
+    }
+}
+
 /* WORK PAGE ELEMENTS END */
 
 /* GIF ELEMENTS START */
@@ -269,6 +469,51 @@ nav .imageSection img {
     background-position: center;
     height: 100vh;
     width: 100vw;
+}
+
+#homePageGifMobile, #aboutPageGifMobile, #contactPageGifMobile {
+    display: none;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .fullPageGif {
+        display: none;
+    }
+
+    #homePageGifMobile {
+        display: inline;
+        scale: 100%;
+        position: absolute;
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        width: 100vw;
+        top: -10%;
+    }
+
+    #aboutPageGifMobile {
+        display: inline;
+        scale: 100%;
+        position: absolute;
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        width: 100vw;
+        top: 5%;
+    }
+
+    #contactPageGifMobile {
+        display: inline;
+        scale: 100%;
+        position: absolute;
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        width: 100vw;
+        top: -5%;
+    }
 }
 
 /* GIF ELEMENTS END */

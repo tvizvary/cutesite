@@ -13,66 +13,78 @@ catch (exception) {
   console.log(exception);
 }
 
-//imageViewer functionality
 try {
-  const imgs = document.querySelectorAll('.individualImage img');
-const imageViewer = document.querySelector('#imageViewer');
-const leftArrow = document.querySelector('#leftArrow');
-const rightArrow = document.querySelector('#rightArrow');
-let currentIndex = 0;
-
-imgs.forEach((img, index) => {
-  if (img.alt !== 'noViewer') {
-    img.parentElement.addEventListener('click', function (event) {
-      event.stopPropagation();
-      currentIndex = index;
-      showImage(currentIndex);
-      scrollToImage(img.parentElement);
-    });
-  }
-});
-
-function showImage(index) {
-  const selectedImg = imgs[index];
-  imageViewer.style.backgroundImage = 'url(' + selectedImg.src + ')';
-  imageViewer.style.display = 'block';
+  document.getElementById('homePageGifMobile').src="img/homepage_mobile.gif?a="+Math.random();
+  setTimeout(function () {
+    document.getElementById('homePageGifMobile').style.setProperty('display', 'none');
+  }, 13700)
 }
-
-function showNextImage() {
-  currentIndex = (currentIndex + 1) % imgs.length;
-  showImage(currentIndex);
-  scrollToImage(imgs[currentIndex].parentElement);
-}
-
-function showPrevImage() {
-  currentIndex = (currentIndex - 1 + imgs.length) % imgs.length;
-  showImage(currentIndex);
-  scrollToImage(imgs[currentIndex].parentElement);
-}
-
-function scrollToImage(element) {
-  element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-}
-
-leftArrow.addEventListener('click', function (event) {
-  event.stopPropagation();
-  showPrevImage();
-});
-
-rightArrow.addEventListener('click', function (event) {
-  event.stopPropagation();
-  showNextImage();
-});
-
-imageViewer.addEventListener('click', function () {
-  this.style.display = 'none';
-});
-}
-
 catch (exception) {
   console.log(exception);
 }
 
+//imageViewer functionality
+try {
+  const eventNames = ['click', 'touchstart']
+  const imgs = document.querySelectorAll('.individualImage img');
+  const imageViewer = document.querySelector('#imageViewer');
+  const leftArrow = document.querySelector('#leftArrow');
+  const rightArrow = document.querySelector('#rightArrow');
+  let currentIndex = 0;
+  
+  for (var i = 0; i < eventNames.length; i++) {
+    imgs.forEach((img, index) => {
+      if (img.alt !== 'noViewer') {
+        img.parentElement.addEventListener(eventNames[i], function (event) {
+          event.stopPropagation();
+          currentIndex = index;
+          showImage(currentIndex);
+          scrollToImage(img.parentElement);
+        });
+      }
+    });
+  }
+
+  function showImage(index) {
+    const selectedImg = imgs[index];
+    imageViewer.style.backgroundImage = 'url(' + selectedImg.src + ')';
+    imageViewer.style.display = 'block';
+  }
+
+  function showNextImage() {
+    currentIndex = (currentIndex + 1) % imgs.length;
+    showImage(currentIndex);
+    scrollToImage(imgs[currentIndex].parentElement);
+  }
+
+  function showPrevImage() {
+    currentIndex = (currentIndex - 1 + imgs.length) % imgs.length;
+    showImage(currentIndex);
+    scrollToImage(imgs[currentIndex].parentElement);
+  }
+
+  function scrollToImage(element) {
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  leftArrow.addEventListener('click', function (event) {
+    event.stopPropagation();
+    showPrevImage();
+  });
+
+  rightArrow.addEventListener('click', function (event) {
+    event.stopPropagation();
+    showNextImage();
+  });
+
+  imageViewer.addEventListener('click', function () {
+    this.style.display = 'none';
+  });
+  }
+
+catch (exception) {
+  console.log(exception);
+}
 
 //still needs either tweaking or overhaul LOL
 var keywords = ['about', 'work', 'contact'];
