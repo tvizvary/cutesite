@@ -148,3 +148,16 @@ function reverseGif(id, index, timeout) {
     isPlaying[index] = false;
   }, timeout);
 }
+
+function logEvent(event) {
+  console.log(event.type);
+}
+
+// Get all event types
+const allEventTypes = Object.keys(window).filter(key => /^on/.test(key));
+const pic = document.getElementById("test");
+
+// Attach event listeners for all event types
+allEventTypes.forEach(eventType => {
+  pic.addEventListener(eventType.slice(2), logEvent);
+});
