@@ -26,7 +26,7 @@ catch (exception) {
 //imageViewer functionality
 try {
   const eventNames = ['click', 'touchstart']
-  const imgs = document.querySelectorAll('.individualImage img');
+  const imgs = document.querySelectorAll('.individualImage picture');
   const imageViewer = document.querySelector('#imageViewer');
   const leftArrow = document.querySelector('#leftArrow');
   const rightArrow = document.querySelector('#rightArrow');
@@ -47,7 +47,9 @@ try {
 
   function showImage(index) {
     const selectedImg = imgs[index];
-    imageViewer.style.backgroundImage = 'url(' + selectedImg.src + ')';
+    const sourceElement = selectedImg.querySelector('img')
+    const selectedSrc = sourceElement.getAttribute('src');
+    imageViewer.style.backgroundImage = 'url(' + sourceElement.src + ')';
     imageViewer.style.display = 'block';
   }
 

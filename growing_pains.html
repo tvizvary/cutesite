@@ -21,10 +21,34 @@
             </div>
         </div>
         <div id="imageContainer" class="comicStrip">
-            <div class="individualImage"><img class="longImg" src="img/page_1.jpg"></div>
-            <div class="individualImage"><img class="longImg" src="img/page_2.jpg"></div>
-            <div class="individualImage"><img class="longImg" src="img/page_3.jpg"></div>
-            <div class="individualImage"><img class="longImg" src="img/page_4.jpg"></div>
+            <div class="individualImage">
+                <picture>
+                    <source media="(min-width: 320px)" srcset="img/scaled_vers/page_1.jpg">
+                    <source srcset="img/page_1.jpg">
+                    <img class="longImg" src="img/page_1.jpg">
+                </picture>
+            </div>
+            <div class="individualImage">
+                <picture>
+                    <source media="(min-width: 320px)" srcset="img/scaled_vers/page_2.jpg">
+                    <source srcset="img/page_2.jpg">
+                    <img class="longImg" src="img/page_2.jpg">
+                </picture>
+            </div>
+            <div class="individualImage">
+                <picture>
+                    <source media="(min-width: 320px)" srcset="img/scaled_vers/page_3.jpg">
+                    <source srcset="img/page_3.jpg">
+                    <img class="longImg" src="img/page_3.jpg">
+                </picture>
+            </div>
+            <div class="individualImage">
+                <picture>
+                    <source media="(min-width: 320px)" srcset="img/scaled_vers/page_4.jpg">
+                    <source srcset="img/page_4.jpg">
+                    <img class="longImg" src="img/page_4.jpg">
+                </picture>
+            </div>
         </div>
         <div class="mediumDesc"><i>5" x 7" Accordion Book - Watercolor, ink, pencil crayon</i></div>
         <div id="imageViewer" onclick="this.style.display='none';"><a id="leftArrow">&lt;</a><a id="rightArrow">&gt;</a></div>

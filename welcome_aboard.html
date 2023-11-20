@@ -21,9 +21,27 @@
             </div>
         </div>
         <div id="imageContainer" class="comicStrip">
-            <div class=individualImage><img class="longImg" src="img/vehicle.jpg"></div>
-            <div class=individualImage><img class="longImg" src="img/vehicle_2.png"></div>
-            <div class=individualImage><img class="longImg" src="img/vehicle_3.png"></div>
+            <div class=individualImage>
+                <picture>
+                    <source media="(min-width: 320px)" srcset="img/scaled_vers/vehicle.jpg">
+                    <source srcset="img/vehicle.jpg">
+                    <img class="longImg" src="img/vehicle.jpg">
+                </picture>
+            </div>
+            <div class=individualImage>
+                <picture>
+                    <source media="(min-width: 320px)" srcset="img/scaled_vers/vehicle_2.png">
+                    <source srcset="img/vehicle_2.png">
+                    <img class="longImg" src="img/vehicle_2.png">
+                </picture>
+            </div>
+            <div class=individualImage>
+                <picture>
+                    <source media="(min-width: 320px)" srcset="img/scaled_vers/vehicle_3.png">
+                    <source srcset="img/vehicle_3.png">
+                    <img class="longImg" src="img/vehicle_3.png">
+                </picture>
+            </div>
         </div>
         <div class="mediumDesc"><i>20" x 8" spreads of my picture book ‘welcome aboard’, digital</i></div>
         <div id="imageViewer"><a id="leftArrow">&lt;</a><a id="rightArrow">&gt;</a></div>
