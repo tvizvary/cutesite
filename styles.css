@@ -377,7 +377,7 @@ nav .imageSection img {
     }
 
     .imageCaption {
-        display: flex;
+        display: none;
         opacity: 0;
         position: absolute;
         box-shadow: none;
