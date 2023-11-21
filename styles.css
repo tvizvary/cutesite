@@ -274,10 +274,6 @@ nav .imageSection img {
 }
 
 .imageCaption {
-    display: none;
-}
-
-.imageCaption {
     display: flex;
     box-shadow: 0px 0px 999px 999px rgba(255,255,255, 0.9) inset, 0px 0px 5px 5px rgba(255,255,255, 0.9);
     position: absolute;
@@ -351,6 +347,10 @@ nav .imageSection img {
     cursor: pointer;
 }
 
+.imageCaptionMobile {
+    display: none;
+}
+
 @media only screen and (max-width: 768px) {
     #starterText {
         scale: 100%;
@@ -378,8 +378,9 @@ nav .imageSection img {
 
     .imageCaption {
         display: flex;
-        box-shadow: 0px 0px 999px 999px rgba(255,255,255, 0.9) inset, 0px 0px 5px 5px rgba(255,255,255, 0.9);
+        opacity: 0;
         position: absolute;
+        box-shadow: none;
         width: 100%;
         height: 100%;
         bottom: 0%;
@@ -388,14 +389,20 @@ nav .imageSection img {
         padding-top: 0.5vw;
         align-items: center;
         justify-content: center;
-        opacity: 0;
-        transition: opacity 300ms ease-in-out;
-    
         color: black;
         font-size: 6vw;
         font-family: comic sans ms, Damascus;
         text-align: center;
         word-wrap: normal;
+        transition: none;
+    }
+
+    .imageCaptionMobile {
+        display: block;
+        font-family: comic sans ms, Damascus;
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     .individualImage {
