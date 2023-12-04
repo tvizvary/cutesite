@@ -298,6 +298,15 @@ nav .imageSection img {
     scale: 65%;
     position: relative;
     display: inline-block;
+    margin-top: -12vw;
+}
+
+.individualImageSoloTall {
+    scale: 75%;
+    position: relative;
+    display: inline-block;
+    margin-top: -10vw;
+    margin-left: 25.09vw;
 }
 
 .individualVideo {

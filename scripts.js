@@ -26,7 +26,7 @@ catch (exception) {
 //imageViewer functionality
 try {
   const eventNames = ['click', 'touchstart']
-  const imgs = document.querySelectorAll('.individualImage picture');
+  var imgs = document.querySelectorAll('picture');
   const imageViewer = document.querySelector('#imageViewer');
   const leftArrow = document.querySelector('#leftArrow');
   const rightArrow = document.querySelector('#rightArrow');
@@ -34,7 +34,7 @@ try {
   
   for (var i = 0; i < eventNames.length; i++) {
     imgs.forEach((img, index) => {
-      if (img.alt !== 'noViewer') {
+      if (img.getAttribute('alt') !== 'noViewer') {
         img.parentElement.addEventListener(eventNames[i], function (event) {
           event.stopPropagation();
           currentIndex = index;
