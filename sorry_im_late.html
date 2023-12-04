@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Olivia LeeChun</title>
+        <link rel="icon" type="image/x-icon" href="img/favicon.png">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id="workNav">
+            <div class="logoSection">
+                <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+            </div>
+            <div class="imageSection">
+                <a id="aboutArea" href="about.html"><img id="about" src="img/about_firstFrame.gif" alt="about"></a>
+                <a id="workArea" href="work.html"><img id="work" src="img/work_firstFrame.gif" alt="work"></a>
+                <a id="contactArea" href="contact.html"><img id="contact" src="img/contact_firstFrame.gif" alt="contact"></a>
+            </div>
+        </div>
+        <div id="imageContainer" class="comicStrip">
+            <div class=individualImageLarge>
+                <picture>
+                    <source media="(min-width: 320px)" srcset="img/scaled_vers/sorryimlate.jpg">
+                    <source srcset="img/sorryimlate.jpg">
+                    <img class="longImg" src="img/sorryimlate.jpg">
+                </picture>
+            </div>
+            <div class=individualImage>
+                <picture>
+                    <source media="(min-width: 320px)" srcset="img/scaled_vers/vehicle.png">
+                    <source srcset="img/vehicle.png">
+                    <img class="longImg" src="img/vehicle.png">
+                </picture>
+            </div>
+            <div class=individualImage>
+                <picture>
+                    <source media="(min-width: 320px)" srcset="img/scaled_vers/vehicle_2.png">
+                    <source srcset="img/vehicle_2.png">
+                    <img class="longImg" src="img/vehicle_2.png">
+                </picture>
+            </div>
+            <div class=individualImage>
+                <picture>
+                    <source media="(min-width: 320px)" srcset="img/scaled_vers/vehicle_3.png">
+                    <source srcset="img/vehicle_3.png">
+                    <img class="longImg" src="img/vehicle_3.png">
+                </picture>
+            </div>
+            <div class="midPageCaption">Drawing Process</div>
+            <div class=individualVideo>
+                <video id="sorryImLateVideo" controls>
+                    <source src="img/sorryimlate.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        <div class="mediumDesc"><i>10" x 8" spreads of my picture book ‘Sorry I'm Late’, digital</i></div>
+        <div id="imageViewer"><a id="leftArrow">&lt;</a><a id="rightArrow">&gt;</a></div>
+    </body>
+    <script src="scripts.js"></script>
+</html>

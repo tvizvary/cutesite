@@ -30,7 +30,7 @@ footer, footer a:visited, footer a:link{
     padding-bottom: 5vw;
     color: #8a88be;
     font-size: 2.0em;
-    font-family: comic sans ms, Damascus;
+    font-family: Helvetica, Damascus;
     text-decoration: none;
 }
 
@@ -40,7 +40,7 @@ footer, footer a:visited, footer a:link{
         padding-bottom: 5vw;
         color: #8a88be;
         font-size: 1.6em;
-        font-family: comic sans ms, Damascus;
+        font-family: Helvetica, Damascus;
         text-decoration: none;
     }
 }
@@ -198,7 +198,7 @@ nav .imageSection img {
     width: 100vw;
     position: relative;
     overflow: hidden;
-    margin-bottom: 20vw;
+    margin-bottom: 15vw;
 }
 
 #introImg {
@@ -212,6 +212,7 @@ nav .imageSection img {
 
     animation-iteration-count: 1;
     animation-fill-mode: both;
+    padding-bottom: 5vw;
 }
 
 @keyframes scaleUp {
@@ -227,6 +228,10 @@ nav .imageSection img {
     overflow: hidden;
     justify-content: center;
     display: block;
+}
+
+#imageContainer a {
+    text-decoration: none;
 }
 
 #imageContainer .tallImg {
@@ -258,6 +263,15 @@ nav .imageSection img {
     display: inline-block;
 }
 
+#imageContainer .largeImg {
+    border-style: solid;
+    border-width: 0.5vw;
+    border-color: #e1a559;
+    height: 100%;
+    width: 75vw;
+    display: inline-block;
+}
+
 .comicStrip {
     padding-top: 0.52vw;
 }
@@ -265,12 +279,41 @@ nav .imageSection img {
 .mediumDesc {
     text-align: center;
     margin-bottom: 2vw;
+    font-family: Helvetica;
+}
+
+.midPageCaption {
+    text-align: center;
+    font-family: Helvetica;
+    font-size: 2em;
 }
 
 .individualImage {
     scale: 75%;
     position: relative;
     display: inline-block;
+}
+
+.individualImageLarge {
+    scale: 65%;
+    position: relative;
+    display: inline-block;
+}
+
+.individualVideo {
+    scale: 75%;
+    position: relative;
+    display: inline-block;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: black;
+}
+
+.individualVideo video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .imageCaption {
@@ -290,7 +333,7 @@ nav .imageSection img {
 
     color: black;
     font-size: 2.5em;
-    font-family: comic sans ms, Damascus;
+    font-family: Helvetica, Damascus;
     text-align: center;
 }
 
@@ -329,7 +372,7 @@ nav .imageSection img {
     padding-left: 1vw;
     color: #8a88be;
     font-size: 10.0em;
-    font-family: comic sans ms, Damascus;
+    font-family: Helvetica, Damascus;
     text-decoration: none;
     cursor: pointer;
 }
@@ -342,7 +385,7 @@ nav .imageSection img {
     padding-right: 1vw;
     color: #8a88be;
     font-size: 10.0em;
-    font-family: comic sans ms, Damascus;
+    font-family: Helvetica, Damascus;
     text-decoration: none;
     cursor: pointer;
 }
@@ -391,7 +434,7 @@ nav .imageSection img {
         justify-content: center;
         color: black;
         font-size: 6vw;
-        font-family: comic sans ms, Damascus;
+        font-family: Helvetica, Damascus;
         text-align: center;
         word-wrap: normal;
         transition: none;
@@ -399,7 +442,7 @@ nav .imageSection img {
 
     .imageCaptionMobile {
         display: block;
-        font-family: comic sans ms, Damascus;
+        font-family: Helvetica, Damascus;
         text-align: center;
         padding-left: 10px;
         padding-right: 10px;
@@ -440,7 +483,7 @@ nav .imageSection img {
         padding-left: 1vw;
         color: #8a88be;
         font-size: 10.0em;
-        font-family: comic sans ms, Damascus;
+        font-family: Helvetica, Damascus;
         text-decoration: none;
         cursor: pointer;
     }
@@ -453,7 +496,7 @@ nav .imageSection img {
         padding-right: 1vw;
         color: #8a88be;
         font-size: 10.0em;
-        font-family: comic sans ms, Damascus;
+        font-family: Helvetica, Damascus;
         text-decoration: none;
         cursor: pointer;
     }
