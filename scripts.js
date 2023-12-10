@@ -26,6 +26,7 @@ catch (exception) {
 //imageViewer functionality
 try {
   const eventNames = ['click', 'touchend']
+  var scrollPos = 0;
   var imgs = document.querySelectorAll('picture');
   const imageViewer = document.querySelector('#imageViewer');
   const leftArrow = document.querySelector('#leftArrow');
@@ -35,12 +36,22 @@ try {
   for (var i = 0; i < eventNames.length; i++) {
     imgs.forEach((img, index) => {
       if (img.getAttribute('alt') !== 'noViewer') {
+        img.parentElement.addEventListener('touchstart', function (event) {
+            scrollPos = window.scrollY / (document.body.offsetHeight - window.innerHeight);
+        });
+
         img.parentElement.addEventListener(eventNames[i], function (event) {
-          console.log("img " + i + " clicked");
-          currentIndex = index;
-          event.stopPropagation();
-          showImage(currentIndex);
-          scrollToImage(img.parentElement);
+          if (Math.abs((scrollPos - (window.scrollY / (document.body.offsetHeight - window.innerHeight)))) / ((scrollPos + (window.scrollY / (document.body.offsetHeight - window.innerHeight))) / 2) <= 0.1) {
+            console.log('less than 10%');
+            console.log("img " + i + " clicked");
+            currentIndex = index;
+            event.stopPropagation();
+            showImage(currentIndex);
+            scrollToImage(img.parentElement);
+          }
+          else {
+            console.log('more than 10%');
+          }
         });
       }
     });
