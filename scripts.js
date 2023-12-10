@@ -70,20 +70,22 @@ try {
     element.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
 
-  leftArrow.addEventListener('click', function (event) {
-    event.stopPropagation();
-    showPrevImage();
-  });
+  for (var i = 0; i < eventNames.length; i++) {
+    leftArrow.addEventListener(eventNames[i], function (event) {
+      event.stopPropagation();
+      showPrevImage();
+    });
+  
+    rightArrow.addEventListener(eventNames[i], function (event) {
+      event.stopPropagation();
+      showNextImage();
+    });
 
-  rightArrow.addEventListener('click', function (event) {
-    event.stopPropagation();
-    showNextImage();
-  });
-
-  // imageViewer.addEventListener('click', function () {
-  //   this.style.display = 'none';
-  // });
+    imageViewer.addEventListener(eventNames[i], function () {
+      this.style.display = 'none';
+    });
   }
+}
 
 catch (exception) {
   console.log(exception);
