@@ -81,8 +81,9 @@ try {
       showNextImage();
     });
 
-    imageViewer.addEventListener(eventNames[i], function () {
+    imageViewer.addEventListener(eventNames[i], function (event) {
       this.style.display = 'none';
+      event.stopPropagation();
     });
   }
 }
