@@ -36,8 +36,9 @@ try {
     imgs.forEach((img, index) => {
       if (img.getAttribute('alt') !== 'noViewer') {
         img.parentElement.addEventListener(eventNames[i], function (event) {
-          event.stopPropagation();
+          console.log("img " + i + " clicked");
           currentIndex = index;
+          event.stopPropagation();
           showImage(currentIndex);
           scrollToImage(img.parentElement);
         });
@@ -79,9 +80,9 @@ try {
     showNextImage();
   });
 
-  imageViewer.addEventListener('click', function () {
-    this.style.display = 'none';
-  });
+  // imageViewer.addEventListener('click', function () {
+  //   this.style.display = 'none';
+  // });
   }
 
 catch (exception) {
