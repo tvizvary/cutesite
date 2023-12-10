@@ -41,7 +41,7 @@ try {
         });
 
         img.parentElement.addEventListener(eventNames[i], function (event) {
-          if (Math.abs((scrollPos - (window.scrollY / (document.body.offsetHeight - window.innerHeight)))) / ((scrollPos + (window.scrollY / (document.body.offsetHeight - window.innerHeight))) / 2) <= 0.1) {
+          if (Math.abs((scrollPos - (window.scrollY / (document.body.offsetHeight - window.innerHeight)))) / ((scrollPos + (window.scrollY / (document.body.offsetHeight - window.innerHeight))) / 2) <= 0.05) {
             console.log('less than 10%');
             console.log("img " + i + " clicked");
             currentIndex = index;
