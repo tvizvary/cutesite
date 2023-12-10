@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Olivia LeeChun</title>
+        <link rel="icon" type="image/x-icon" href="img/favicon.png">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id="workNav">
+            <div class="logoSection">
+                <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+            </div>
+            <div class="imageSection">
+                <a id="aboutArea" href="about.html"><img id="about" src="img/about_firstFrame.gif" alt="about"></a>
+                <a id="workArea" href="work.html"><img id="work" src="img/work_firstFrame.gif" alt="work"></a>
+                <a id="contactArea" href="contact.html"><img id="contact" src="img/contact_firstFrame.gif" alt="contact"></a>
+            </div>
+        </div>
+        <div id="imageContainer">
+            <div class="individualImage">
+                <picture>
+                    <source media="(min-width: 320px)" srcset="img/scaled_vers/extras.png">
+                    <source srcset="img/extras.png">
+                    <img class="longImg" src="img/extras.png">
+                </picture>
+                <div class="imageCaption">"I'll be there", 7x5", Procreate, 2023</div>
+            </div>
+            <div class="individualImageSoloTall">
+                <picture>
+                    <source media="(min-width: 320px)" srcset="img/scaled_vers/imastar.png">
+                    <source srcset="img/imastar.png">
+                    <img class="tallImg" src="img/imastar.png">
+                </picture>
+                <div class="imageCaption">"I'm a Star", 5x7", Procreate, 2023</div>
+            </div>
+            <div class="individualImage">
+                <picture>
+                    <source media="(min-width: 320px)" srcset="img/scaled_vers/jacket_1.png">
+                    <source srcset="img/jacket_1.png">
+                    <img class="threeWayImg" src="img/jacket_1.png">
+                </picture>
+                <div class="imageCaption">"What's in Your Jacket?", 5x7", Procreate, 2023<br>1/3</div>
+            </div>
+            <div class="individualImage">
+                <picture>
+                    <source media="(min-width: 320px)" srcset="img/scaled_vers/jacket_2.png">
+                    <source srcset="img/jacket_2.png">
+                    <img class="threeWayImg" src="img/jacket_2.png">
+                </picture>
+                <div class="imageCaption">"What's in Your Jacket?", 5x7", Procreate, 2023<br>2/3</div>
+            </div>
+            <div class="individualImage">
+                <picture>
+                    <source media="(min-width: 320px)" srcset="img/scaled_vers/jacket_3.png">
+                    <source srcset="img/jacket_3.png">
+                    <img class="threeWayImg" src="img/jacket_3.png">
+                </picture>
+                <div class="imageCaption">"What's in Your Jacket?", 5x7", Procreate, 2023<br>3/3</div>
+            </div>
+        </div>
+        <div id="imageViewer" onclick="this.style.display='none';"><a id="leftArrow">&lt;</a><a id="rightArrow">&gt;</a></div>
+    </body>
+    <script src="scripts.js"></script>
+</html>

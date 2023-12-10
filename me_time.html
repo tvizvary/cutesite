@@ -21,11 +21,29 @@
             </div>
         </div>
         <div id="imageContainer" class="comicStrip">
-            <div class=individualImage><img class="threeWayImg" src="img/me_time_1.png"></div>
-            <div class=individualImage><img class="threeWayImg" src="img/me_time_2.png"></div>
-            <div class=individualImage><img class="threeWayImg" src="img/me_time_3.png"></div>
+            <div class=individualImage>
+                <picture>
+                    <source media="(min-width: 320px)" srcset="img/scaled_vers/me_time_1.png">
+                    <source srcset="img/me_time_1.png">
+                    <img class="threeWayImg" src="img/me_time_1.png">
+                </picture>
+            </div>
+            <div class=individualImage>
+                <picture>
+                    <source media="(min-width: 320px)" srcset="img/scaled_vers/me_time_2.png">
+                    <source srcset="img/me_time_2.png">
+                    <img class="threeWayImg" src="img/me_time_2.png">
+                </picture>
+            </div>
+            <div class=individualImage>
+                <picture>
+                    <source media="(min-width: 320px)" srcset="img/scaled_vers/me_time_3.png">
+                    <source srcset="img/me_time_3.png">
+                    <img class="threeWayImg" src="img/me_time_3.png">
+                </picture>
+            </div>
         </div>
-        <div class="mediumDesc"><i>8" x 8" - Watercolor, ink, pencil crayon, edited in photoshop</i></div>
+        <div class="mediumDesc"><i>8" x 8" - Watercolor, ink, pencil crayon, edited in photoshop, 2022</i></div>
         <div id="imageViewer"><a id="leftArrow">&lt;</a><a id="rightArrow">&gt;</a></div>
     </body>
     <script src="scripts.js"></script>

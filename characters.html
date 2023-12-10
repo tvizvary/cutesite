@@ -21,10 +21,34 @@
             </div>
         </div>
         <div id="imageContainer" class="comicStrip">
-            <div class="individualImage"><img class="tallImg" src="img/zepp.png"></div>
-            <div class="individualImage"><img class="tallImg" src="img/mow.png"></div>
-            <div class="individualImage"><img class="tallImg" src="img/beanz.png"></div>
-            <div class="individualImage"><img class="tallImg" src="img/bibi.png"></div>
+            <div class="individualImage">
+                <picture>
+                    <source media="(min-width: 320px)" srcset="img/scaled_vers/zepp.png">
+                    <source srcset="img/zepp.png">
+                    <img class="tallImg" src="img/zepp.png">
+                </picture>
+            </div>
+            <div class="individualImage">
+                <picture>
+                    <source media="(min-width: 320px)" srcset="img/scaled_vers/mow.png">
+                    <source srcset="img/mow.png">
+                    <img class="tallImg" src="img/mow.png">
+                </picture>
+            </div>
+            <div class="individualImage">
+                <picture>
+                    <source media="(min-width: 320px)" srcset="img/scaled_vers/beanz.png">
+                    <source srcset="img/beanz.png">
+                    <img class="tallImg" src="img/beanz.png">
+                </picture>
+            </div>
+            <div class="individualImage">
+                <picture>
+                    <source media="(min-width: 320px)" srcset="img/scaled_vers/bibi.png">
+                    <source srcset="img/bibi.png">
+                    <img class="tallImg" src="img/bibi.png">
+                </picture>
+            </div>
         </div>
         <div id="imageViewer" onclick="this.style.display='none';"><a id="leftArrow">&lt;</a><a id="rightArrow">&gt;</a></div>
     </body>

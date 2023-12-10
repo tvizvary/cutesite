@@ -25,8 +25,8 @@ catch (exception) {
 
 //imageViewer functionality
 try {
-  const eventNames = ['click']
-  const imgs = document.querySelectorAll('.individualImage img');
+  const eventNames = ['click', 'touchstart']
+  var imgs = document.querySelectorAll('picture');
   const imageViewer = document.querySelector('#imageViewer');
   const leftArrow = document.querySelector('#leftArrow');
   const rightArrow = document.querySelector('#rightArrow');
@@ -34,7 +34,7 @@ try {
   
   for (var i = 0; i < eventNames.length; i++) {
     imgs.forEach((img, index) => {
-      if (img.alt !== 'noViewer') {
+      if (img.getAttribute('alt') !== 'noViewer') {
         img.parentElement.addEventListener(eventNames[i], function (event) {
           console.log("img " + i + " clicked");
           currentIndex = index;
@@ -46,21 +46,12 @@ try {
     });
   }
 
-  try {
-    function showImage(index) {
-      console.log(index + " showImage Called");
-      const selectedImg = imgs[index];
-      console.log(selectedImg.src);
-      imageViewer.style.backgroundImage = 'url(' + selectedImg.src + ')';
-      imageViewer.style.display = 'block';
-      console.log(imageViewer.style.display);
-      if (imageViewer.style.display !=='block') {
-        console.log("it aint block");
-      }
-    }
-  }
-  catch (exception) {
-    console.log(exception);
+  function showImage(index) {
+    const selectedImg = imgs[index];
+    const sourceElement = selectedImg.querySelector('img')
+    const selectedSrc = sourceElement.getAttribute('src');
+    imageViewer.style.backgroundImage = 'url(' + sourceElement.src + ')';
+    imageViewer.style.display = 'block';
   }
 
   function showNextImage() {
