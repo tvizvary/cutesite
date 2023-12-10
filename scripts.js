@@ -25,7 +25,7 @@ catch (exception) {
 
 //imageViewer functionality
 try {
-  const eventNames = ['click', 'touchstart']
+  const eventNames = ['click', 'touchend']
   var imgs = document.querySelectorAll('picture');
   const imageViewer = document.querySelector('#imageViewer');
   const leftArrow = document.querySelector('#leftArrow');
@@ -81,9 +81,9 @@ try {
       showNextImage();
     });
 
-    imageViewer.addEventListener(eventNames[i], function (event) {
-      this.style.display = 'none';
+    imageViewer.addEventListener('click', function (event) {
       event.stopPropagation();
+      this.style.display = 'none';
     });
   }
 }
