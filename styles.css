@@ -495,6 +495,7 @@ nav .imageSection img {
     }
 
     #leftArrow, #leftArrow:visited, #leftArrow:link {
+        display: none;
         position: relative;
         float: left;
         text-align: center;
@@ -509,6 +510,7 @@ nav .imageSection img {
     }
     
     #rightArrow, #rightArrow:visited, #rightArrow:link {
+        display: none;
         position: relative;
         float: right;
         text-align: center;

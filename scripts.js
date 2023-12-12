@@ -25,13 +25,16 @@ catch (exception) {
 
 //imageViewer functionality
 try {
+  // dont need event names anymore p sure
   const eventNames = ['click', 'touchend']
-  var scrollPos = 0;
-  var imgs = document.querySelectorAll('picture');
   const imageViewer = document.querySelector('#imageViewer');
   const leftArrow = document.querySelector('#leftArrow');
   const rightArrow = document.querySelector('#rightArrow');
+  var scrollPos = 0;
+  var imgs = document.querySelectorAll('picture');
   let currentIndex = 0;
+  let touchStartX = 0;
+  let touchEndX = 0;
   
   for (var i = 0; i < eventNames.length; i++) {
     imgs.forEach((img, index) => {
@@ -89,22 +92,35 @@ try {
     element.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
 
-  for (var i = 0; i < eventNames.length; i++) {
-    leftArrow.addEventListener('touchend', function (event) {
-      event.stopPropagation();
-      showPrevImage();
-    });
-  
-    rightArrow.addEventListener('click', function (event) {
-      event.stopPropagation();
-      showNextImage();
-    });
-
-    imageViewer.addEventListener('click', function (event) {
-      event.stopPropagation();
-      this.style.display = 'none';
-    });
+  function checkSwipe() {
+    if (touchEndX < touchStartX) showPrevImage();
+    if (touchEndX > touchStartX) showNextImage();
   }
+
+  leftArrow.addEventListener('click', function (event) {
+    event.stopPropagation();
+    showPrevImage();
+  });
+
+  rightArrow.addEventListener('click', function (event) {
+    event.stopPropagation();
+    showNextImage();
+  });
+
+  imageViewer.addEventListener('click', function (event) {
+    event.stopPropagation();
+    this.style.display = 'none';
+  });
+
+  imageViewer.addEventListener('touchstart', function (event) {
+      touchStartX = event.changedTouches[0].screenX;
+  });
+
+  imageViewer.addEventListener('touchend', function (event) {
+      touchEndX = event.changedTouches[0].screenX;
+      checkSwipe();
+  });
+
 }
 
 catch (exception) {
