@@ -93,8 +93,14 @@ try {
   }
 
   function checkSwipe() {
-    if (touchEndX < touchStartX) showPrevImage();
-    if (touchEndX > touchStartX) showNextImage();
+    if (touchEndX < touchStartX) {
+      showPrevImage();
+      console.log("swipe left");
+    } 
+    if (touchEndX > touchStartX) {
+      showNextImage();
+      console.log("swipe right");
+    }
   }
 
   leftArrow.addEventListener('click', function (event) {
@@ -107,18 +113,20 @@ try {
     showNextImage();
   });
 
-  // imageViewer.addEventListener('click', function (event) {
-  //   event.stopPropagation();
-  //   this.style.display = 'none';
-  // });
+  imageViewer.addEventListener('click', function (event) {
+    event.stopPropagation();
+    this.style.display = 'none';
+  });
 
   imageViewer.addEventListener('touchstart', function (event) {
-      touchStartX = event.changedTouches[0].screenX;
+    event.preventDefault();
+    touchStartX = event.changedTouches[0].screenX;
   });
 
   imageViewer.addEventListener('touchend', function (event) {
-      touchEndX = event.changedTouches[0].screenX;
-      checkSwipe();
+    event.preventDefault();
+    touchEndX = event.changedTouches[0].screenX;
+    checkSwipe();
   });
 
 }
