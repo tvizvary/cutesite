@@ -40,7 +40,7 @@ try {
             scrollPos = window.scrollY / (document.body.offsetHeight - window.innerHeight);
         });
 
-        img.parentElement.addEventListener(eventNames[i], function (event) {
+        img.parentElement.addEventListener('touchend', function (event) {
           if (Math.abs((scrollPos - (window.scrollY / (document.body.offsetHeight - window.innerHeight)))) / ((scrollPos + (window.scrollY / (document.body.offsetHeight - window.innerHeight))) / 2) <= 0.01) {
             console.log('less than 10%');
             console.log("img " + i + " clicked");
@@ -52,6 +52,14 @@ try {
           else {
             console.log('more than 10%');
           }
+        });
+        img.parentElement.addEventListener('click', function (event) {
+            console.log("img " + i + " clicked");
+            currentIndex = index;
+            event.stopPropagation();
+            showImage(currentIndex);
+            scrollToImage(img.parentElement);
+    
         });
       }
     });
