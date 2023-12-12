@@ -25,22 +25,43 @@ catch (exception) {
 
 //imageViewer functionality
 try {
-  const eventNames = ['click', 'touchstart']
-  var imgs = document.querySelectorAll('picture');
+  // dont need event names anymore p sure
+  const eventNames = ['click', 'touchend']
   const imageViewer = document.querySelector('#imageViewer');
   const leftArrow = document.querySelector('#leftArrow');
   const rightArrow = document.querySelector('#rightArrow');
+  var scrollPos = 0;
+  var imgs = document.querySelectorAll('picture');
   let currentIndex = 0;
+  let initialX = 0;
+  let currentX = 0;
   
   for (var i = 0; i < eventNames.length; i++) {
     imgs.forEach((img, index) => {
       if (img.getAttribute('alt') !== 'noViewer') {
-        img.parentElement.addEventListener(eventNames[i], function (event) {
-          console.log("img " + i + " clicked");
-          currentIndex = index;
-          event.stopPropagation();
-          showImage(currentIndex);
-          scrollToImage(img.parentElement);
+        img.parentElement.addEventListener('touchstart', function (event) {
+            scrollPos = window.scrollY / (document.body.offsetHeight - window.innerHeight);
+        });
+
+        img.parentElement.addEventListener('touchend', function (event) {
+          if (Math.abs((scrollPos - (window.scrollY / (document.body.offsetHeight - window.innerHeight)))) / ((scrollPos + (window.scrollY / (document.body.offsetHeight - window.innerHeight))) / 2) <= 0.01) {
+            console.log('less than 10%');
+            console.log("img " + i + " clicked");
+            currentIndex = index;
+            event.stopPropagation();
+            showImage(currentIndex);
+            scrollToImage(img.parentElement);
+          }
+          else {
+            console.log('more than 10%');
+          }
+        });
+        img.parentElement.addEventListener('click', function (event) {
+            console.log("img " + i + " clicked");
+            currentIndex = index;
+            showImage(currentIndex);
+            scrollToImage(img.parentElement);
+    
         });
       }
     });
@@ -80,10 +101,32 @@ try {
     showNextImage();
   });
 
-  // imageViewer.addEventListener('click', function () {
-  //   this.style.display = 'none';
-  // });
-  }
+  imageViewer.addEventListener('click', function (event) {
+    this.style.display = 'none';
+  });
+
+  imageViewer.addEventListener('touchstart', function (event) {
+    initialX = event.touches[0].clientX;
+  });
+
+  imageViewer.addEventListener('touchmove', function (event) {
+    currentX = event.touches[0].clientX;
+  });
+
+  imageViewer.addEventListener('touchend', function (event) {
+    var deltaX = currentX - initialX;
+    var threshold = 50;
+
+    if (deltaX > threshold) {
+      showNextImage();
+      console.log('Swipe right');
+    } else if (deltaX < -threshold) {
+      showPrevImage();
+      console.log('Swipe left');
+    }
+  });
+
+}
 
 catch (exception) {
   console.log(exception);

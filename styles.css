@@ -384,6 +384,7 @@ nav .imageSection img {
     font-family: Helvetica, Damascus;
     text-decoration: none;
     cursor: pointer;
+    user-select: none;
 }
 
 #rightArrow, #rightArrow:visited, #rightArrow:link {
@@ -397,9 +398,14 @@ nav .imageSection img {
     font-family: Helvetica, Damascus;
     text-decoration: none;
     cursor: pointer;
+    user-select: none;
 }
 
 .imageCaptionMobile {
+    display: none;
+}
+
+#mobileExitCaption {
     display: none;
 }
 
@@ -464,6 +470,14 @@ nav .imageSection img {
         display: inline-block;
     }
 
+    .individualImageSoloTall {
+        scale: 75%;
+        position: relative;
+        display: inline-block;
+        margin-top: -10vw;
+        margin-left: 0vw;
+    }
+
     #imageContainer .tallImg {
         border-style: solid;
         border-width: 0.5vw;
@@ -485,29 +499,33 @@ nav .imageSection img {
     }
 
     #leftArrow, #leftArrow:visited, #leftArrow:link {
+        display: none;
         position: relative;
         float: left;
         text-align: center;
-        top: 75%;
+        top: 80%;
         padding-left: 1vw;
         color: #8a88be;
-        font-size: 10.0em;
+        font-size: 5.0em;
         font-family: Helvetica, Damascus;
         text-decoration: none;
         cursor: pointer;
+        user-select: none;
     }
     
     #rightArrow, #rightArrow:visited, #rightArrow:link {
+        display: none;
         position: relative;
         float: right;
         text-align: center;
-        top: 75%;
+        top: 80%;
         padding-right: 1vw;
         color: #8a88be;
-        font-size: 10.0em;
+        font-size: 5.0em;
         font-family: Helvetica, Damascus;
         text-decoration: none;
         cursor: pointer;
+        user-select: none;
     }
 
     .mediumDesc {
@@ -515,6 +533,15 @@ nav .imageSection img {
         margin-bottom: 2vw;
         font-size: 3vw;
         font-family: DamascusLight;
+    }
+
+    #mobileExitCaption {
+        display: inline;
+        position: relative;
+        left: 30%;
+        top: 10%;
+        font-family: Helvetica, Damascus;
+        color: #8a88be;  
     }
 }
 
