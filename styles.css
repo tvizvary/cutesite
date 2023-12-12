@@ -405,6 +405,10 @@ nav .imageSection img {
     display: none;
 }
 
+#mobileExitCaption {
+    display: none;
+}
+
 @media only screen and (max-width: 768px) {
     #starterText {
         scale: 100%;
@@ -529,6 +533,15 @@ nav .imageSection img {
         margin-bottom: 2vw;
         font-size: 3vw;
         font-family: DamascusLight;
+    }
+
+    #mobileExitCaption {
+        display: inline;
+        position: relative;
+        left: 30%;
+        top: 10%;
+        font-family: Helvetica, Damascus;
+        color: #8a88be;  
     }
 }
 

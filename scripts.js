@@ -59,7 +59,6 @@ try {
         img.parentElement.addEventListener('click', function (event) {
             console.log("img " + i + " clicked");
             currentIndex = index;
-            // event.stopPropagation();
             showImage(currentIndex);
             scrollToImage(img.parentElement);
     
@@ -103,7 +102,6 @@ try {
   });
 
   imageViewer.addEventListener('click', function (event) {
-    // event.stopPropagation();
     this.style.display = 'none';
   });
 
