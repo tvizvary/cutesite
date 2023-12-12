@@ -33,8 +33,8 @@ try {
   var scrollPos = 0;
   var imgs = document.querySelectorAll('picture');
   let currentIndex = 0;
-  let touchStartX = 0;
-  let touchEndX = 0;
+  let initialX = 0;
+  let currentX = 0;
   
   for (var i = 0; i < eventNames.length; i++) {
     imgs.forEach((img, index) => {
@@ -92,17 +92,6 @@ try {
     element.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
 
-  function checkSwipe() {
-    if (touchEndX < touchStartX) {
-      showPrevImage();
-      console.log("swipe left");
-    } 
-    if (touchEndX > touchStartX) {
-      showNextImage();
-      console.log("swipe right");
-    }
-  }
-
   leftArrow.addEventListener('click', function (event) {
     event.stopPropagation();
     showPrevImage();
@@ -119,12 +108,25 @@ try {
   });
 
   imageViewer.addEventListener('touchstart', function (event) {
-    touchStartX = event.changedTouches[0].screenX;
+    initialX = event.touches[0].clientX;
+  });
+
+  imageViewer.addEventListener('touchmove', function (event) {
+    currentX = event.touches[0].clientX;
   });
 
   imageViewer.addEventListener('touchend', function (event) {
-    touchEndX = event.changedTouches[0].screenX;
-    checkSwipe();
+    var deltaX = currentX - initialX;
+
+    var threshold = 50;
+
+    if (deltaX > threshold) {
+      showNextImage();
+      console.log('Swipe right');
+    } else if (deltaX < -threshold) {
+      showPrevImage();
+      console.log('Swipe left');
+    }
   });
 
 }
