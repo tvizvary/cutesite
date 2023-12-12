@@ -119,12 +119,10 @@ try {
   });
 
   imageViewer.addEventListener('touchstart', function (event) {
-    event.preventDefault();
     touchStartX = event.changedTouches[0].screenX;
   });
 
   imageViewer.addEventListener('touchend', function (event) {
-    event.preventDefault();
     touchEndX = event.changedTouches[0].screenX;
     checkSwipe();
   });
