@@ -107,10 +107,10 @@ try {
     showNextImage();
   });
 
-  imageViewer.addEventListener('click', function (event) {
-    event.stopPropagation();
-    this.style.display = 'none';
-  });
+  // imageViewer.addEventListener('click', function (event) {
+  //   event.stopPropagation();
+  //   this.style.display = 'none';
+  // });
 
   imageViewer.addEventListener('touchstart', function (event) {
       touchStartX = event.changedTouches[0].screenX;
