@@ -384,6 +384,7 @@ nav .imageSection img {
     font-family: Helvetica, Damascus;
     text-decoration: none;
     cursor: pointer;
+    user-select: none;
 }
 
 #rightArrow, #rightArrow:visited, #rightArrow:link {
@@ -397,6 +398,7 @@ nav .imageSection img {
     font-family: Helvetica, Damascus;
     text-decoration: none;
     cursor: pointer;
+    user-select: none;
 }
 
 .imageCaptionMobile {
@@ -496,26 +498,28 @@ nav .imageSection img {
         position: relative;
         float: left;
         text-align: center;
-        top: 90%;
+        top: 80%;
         padding-left: 1vw;
         color: #8a88be;
         font-size: 5.0em;
         font-family: Helvetica, Damascus;
         text-decoration: none;
         cursor: pointer;
+        user-select: none;
     }
     
     #rightArrow, #rightArrow:visited, #rightArrow:link {
         position: relative;
         float: right;
         text-align: center;
-        top: 90%;
+        top: 80%;
         padding-right: 1vw;
         color: #8a88be;
         font-size: 5.0em;
         font-family: Helvetica, Damascus;
         text-decoration: none;
         cursor: pointer;
+        user-select: none;
     }
 
     .mediumDesc {

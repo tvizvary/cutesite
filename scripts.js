@@ -90,12 +90,12 @@ try {
   }
 
   for (var i = 0; i < eventNames.length; i++) {
-    leftArrow.addEventListener(eventNames[i], function (event) {
+    leftArrow.addEventListener('touchend', function (event) {
       event.stopPropagation();
       showPrevImage();
     });
   
-    rightArrow.addEventListener(eventNames[i], function (event) {
+    rightArrow.addEventListener('click', function (event) {
       event.stopPropagation();
       showNextImage();
     });
