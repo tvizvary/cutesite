@@ -367,7 +367,7 @@ nav .imageSection img {
     background-size: contain;
     background-repeat: no-repeat no-repeat;
     background-position: center center;
-    background-color: rgba(255,255,255, 1.0);
+    background-color: rgba(255,255,255, 0.5);
     user-select: none;
 
     animation: fadeInAnimation ease 500ms;
@@ -412,22 +412,6 @@ nav .imageSection img {
     cursor: pointer;
 }
 
-#exitCaption {
-    display: inline;
-    position: relative;
-    left: 24%;
-    top: 85%;
-    font-family: Helvetica, Damascus;
-    font-size: 8em;
-    cursor: pointer;
-    color: black;
-    opacity: 80%;
-
-    animation: fadeOutAnimation ease 3.5s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-}
-
 @keyframes fadeOutAnimation {
     0% {
         opacity: 80%;
@@ -441,17 +425,13 @@ nav .imageSection img {
     display: none;
 }
 
-#mobileExitCaption {
-    display: none;
-}
-
 .imageDots {
     position: absolute;
     bottom: 0%;
     left: 35%;
     font-size: 10em;
     font-family: Courier New;
-    color: black;
+    color: grey;
     opacity: 80%;
     z-index: 1;
 }
@@ -462,7 +442,7 @@ nav .imageSection img {
     left: 42.5%;
     font-size: 10em;
     font-family: Courier New;
-    color: black;
+    color: grey;
     opacity: 80%;
     z-index: 1;
 }
@@ -593,21 +573,18 @@ nav .imageSection img {
         font-family: DamascusLight;
     }
 
-    #mobileExitCaption {
-        display: inline;
-        position: relative;
-        left: 30%;
-        top: 10%;
-        font-family: Helvetica, Damascus;
-        color: #8a88be;  
-    }
-
     #exitCaption {
         display: none;
     }
 
     #exitButton {
-        display: none;
+        display: inline;
+        position: relative;
+        left: 85%;
+        top: -1%;
+        font-family: Helvetica, Damascus;
+        font-size: 5em;
+        cursor: pointer;
     }
 
     .imageDots {
@@ -616,7 +593,7 @@ nav .imageSection img {
         left: 31%;
         font-size: 5em;
         font-family: Courier New;
-        color: black;
+        color: grey;
         opacity: 80%;
         z-index: 1;
     }
@@ -627,7 +604,7 @@ nav .imageSection img {
         left: 32%;
         font-size: 5em;
         font-family: Courier New;
-        color: black;
+        color: grey;
         opacity: 80%;
         z-index: 1;
     }
